@@ -3,6 +3,7 @@ package com.example.langfant
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -39,6 +40,30 @@ class ExerciseActivity : AppCompatActivity() {
     private fun displayExercise(index: Int) {
         if (index < exercises.length()) {
             val exercise = exercises.getJSONObject(index)
+            val sentence = exercise.getString("sentence")
+            val answer = exercise.getString("answer")
+
+            val textSentence: TextView = findViewById(R.id.textSentence)
+            textSentence.text = sentence
+
+            val layout: LinearLayout = findViewById(R.id.wordButtonsLayout)
+            layout.removeAllViews() // Clear previous buttons
+
+            val words = answer.split(" ")
+            for (word in words) {
+                val button = Button(this)
+                button.text = word
+                layout.addView(button)
+            }
+        } else {
+            // No more exercises, handle end of exercises
+            // For now, let's just display a toast message
+            Toast.makeText(this, "No more exercises", Toast.LENGTH_SHORT).show()
+        }
+    }
+    /*private fun displayExercise(index: Int) {
+        if (index < exercises.length()) {
+            val exercise = exercises.getJSONObject(index)
             val prompt = exercise.getString("prompt")
             val sentence = exercise.getString("sentence")
 
@@ -56,5 +81,5 @@ class ExerciseActivity : AppCompatActivity() {
             // For now, let's just display a toast message
             Toast.makeText(this, "No more exercises", Toast.LENGTH_SHORT).show()
         }
-    }
+    }*/
 }

@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/activityLayout"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
     <!-- Prompt TextView -->
     <TextView
@@ -27,20 +24,24 @@
         android:text="This is an example sentence."
         android:textSize="24sp" />
 
-    <LinearLayout
-        android:id="@+id/wordButtonsLayout"
+    <!-- User input EditText -->
+    <EditText
+        android:id="@+id/editTextAnswer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp">
-    </LinearLayout>
+        android:layout_below="@id/textSentence"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Type your translation here"
+        android:inputType="text" />
 
     <!-- Submit Button -->
     <Button
         android:id="@+id/buttonSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/wordButtonsLayout"
+        android:layout_below="@id/editTextAnswer"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:text="Submit" />
@@ -54,22 +55,4 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="Skip" />
-</LinearLayout>
-
-
-    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-    <TextView
-        android:id="@+id/textPrompt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Prompt"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/textSentence"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sentence"
-        android:textSize="24sp" />
-    -->
+</RelativeLayout>
