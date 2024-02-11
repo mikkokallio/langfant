@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.langfant.R
+import com.google.android.flexbox.FlexboxLayout
 import org.json.JSONArray
 import java.io.InputStream
 
@@ -46,7 +47,7 @@ class ExerciseActivity : AppCompatActivity() {
             val textSentence: TextView = findViewById(R.id.textSentence)
             textSentence.text = sentence
 
-            val layout: LinearLayout = findViewById(R.id.wordButtonsLayout)
+            val layout: FlexboxLayout = findViewById(R.id.wordButtonsLayout)
             layout.removeAllViews() // Clear previous buttons
 
             val words = answer.split(" ")
@@ -61,25 +62,4 @@ class ExerciseActivity : AppCompatActivity() {
             Toast.makeText(this, "No more exercises", Toast.LENGTH_SHORT).show()
         }
     }
-    /*private fun displayExercise(index: Int) {
-        if (index < exercises.length()) {
-            val exercise = exercises.getJSONObject(index)
-            val prompt = exercise.getString("prompt")
-            val sentence = exercise.getString("sentence")
-
-            val textPrompt: TextView = findViewById(R.id.textPrompt)
-            val textSentence: TextView = findViewById(R.id.textSentence)
-
-            textPrompt.text = prompt
-            textSentence.text = sentence
-
-            // Clear answer EditText
-            val editTextAnswer: EditText = findViewById(R.id.editTextAnswer)
-            editTextAnswer.text.clear()
-        } else {
-            // No more exercises, handle end of exercises
-            // For now, let's just display a toast message
-            Toast.makeText(this, "No more exercises", Toast.LENGTH_SHORT).show()
-        }
-    }*/
 }

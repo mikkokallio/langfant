@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activityLayout"
     android:orientation="vertical"
     android:padding="16dp">
@@ -27,13 +28,16 @@
         android:text="This is an example sentence."
         android:textSize="24sp" />
 
-    <LinearLayout
+    <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/wordButtonsLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start"
+        app:alignItems="flex_start"
         android:layout_marginTop="16dp">
-    </LinearLayout>
+    </com.google.android.flexbox.FlexboxLayout>
 
     <!-- Submit Button -->
     <Button
