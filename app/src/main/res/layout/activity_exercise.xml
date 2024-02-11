@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Prompt TextView -->
+    <TextView
+        android:id="@+id/textPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Translate the following sentence:"
+        android:textSize="18sp" />
+
+    <!-- Sentence TextView -->
+    <TextView
+        android:id="@+id/textSentence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textPrompt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="This is an example sentence."
+        android:textSize="24sp" />
+
+    <!-- User input EditText -->
+    <EditText
+        android:id="@+id/editTextAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textSentence"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Type your translation here"
+        android:inputType="text" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAnswer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Submit" />
+
+    <!-- Skip Button -->
+    <Button
+        android:id="@+id/buttonSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSubmit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Skip" />
+</RelativeLayout>
