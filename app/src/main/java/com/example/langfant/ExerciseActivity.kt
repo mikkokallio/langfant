@@ -41,7 +41,7 @@ class ExerciseActivity : AppCompatActivity() {
         if (index < exercises.length()) {
             val exercise = exercises.getJSONObject(index)
             val sentence = exercise.getString("sentence")
-            val answer = exercise.getString("answer")
+            val answer = exercise.getString("answer").replace("[^\\p{L}\\s]".toRegex(), "")
 
             val textSentence: TextView = findViewById(R.id.textSentence)
             textSentence.text = sentence
