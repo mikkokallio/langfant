@@ -3,14 +3,26 @@ package com.example.langfant
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.langfant.R
+import org.json.JSONArray
+import java.io.InputStream
 
 class ExerciseActivity : AppCompatActivity() {
+    private lateinit var exercises: JSONArray
+    private var currentIndex = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
+
+        // Read JSON file
+        val json = resources.openRawResource(R.raw.exercises).bufferedReader().use { it.readText() }
+        exercises = JSONArray(json)
+
+        // Display initial exercise
+        displayExercise(currentIndex)
 
         // Find the submit button
         val submitButton: Button = findViewById(R.id.buttonSubmit)
@@ -18,17 +30,31 @@ class ExerciseActivity : AppCompatActivity() {
         // Set OnClickListener for the submit button
         submitButton.setOnClickListener {
             // Handle button click here
-            handleSubmission()
+            // For now, let's just display the next exercise
+            currentIndex++
+            displayExercise(currentIndex)
         }
     }
 
-    private fun handleSubmission() {
-        // Add your logic to handle the submission here
-        // For example, you can retrieve the user's answer from the EditText
-        val userAnswer = findViewById<EditText>(R.id.editTextAnswer).text.toString()
+    private fun displayExercise(index: Int) {
+        if (index < exercises.length()) {
+            val exercise = exercises.getJSONObject(index)
+            val prompt = exercise.getString("prompt")
+            val sentence = exercise.getString("sentence")
 
-        // Do something with the user's answer, such as validating it or processing it
-        // For now, let's just display a toast message with the user's answer
-        Toast.makeText(this, "Submitted answer: $userAnswer", Toast.LENGTH_SHORT).show()
+            val textPrompt: TextView = findViewById(R.id.textPrompt)
+            val textSentence: TextView = findViewById(R.id.textSentence)
+
+            textPrompt.text = prompt
+            textSentence.text = sentence
+
+            // Clear answer EditText
+            val editTextAnswer: EditText = findViewById(R.id.editTextAnswer)
+            editTextAnswer.text.clear()
+        } else {
+            // No more exercises, handle end of exercises
+            // For now, let's just display a toast message
+            Toast.makeText(this, "No more exercises", Toast.LENGTH_SHORT).show()
+        }
     }
 }

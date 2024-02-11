@@ -1,0 +1,12 @@
+[
+  {
+    "prompt": "Translate the following sentence:",
+    "sentence": "This is an example sentence.",
+    "answer": "Ovo je primjer rečenice."
+  },
+  {
+    "prompt": "Translate the following sentence:",
+    "sentence": "Another example sentence.",
+    "answer": "Još jedna primjer rečenica."
+  }
+]
