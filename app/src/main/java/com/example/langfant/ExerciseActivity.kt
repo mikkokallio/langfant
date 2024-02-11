@@ -36,6 +36,7 @@ class ExerciseActivity : AppCompatActivity() {
         submitButton.setOnClickListener {
             // Handle button click here
             // For now, let's just display the next exercise
+            checkAnswer()
             currentIndex++
             displayExercise(currentIndex)
         }
@@ -91,5 +92,22 @@ class ExerciseActivity : AppCompatActivity() {
         val selectedWordsText = selectedWords.joinToString(" ")
         val selectedWordsTextView: TextView = findViewById(R.id.selectedWordsTextView)
         selectedWordsTextView.text = selectedWordsText
+    }
+
+    private fun checkAnswer() {
+        val exercise = exercises.getJSONObject(currentIndex)
+        val answer = exercise.getString("answer").replace("[^\\p{L}\\s]".toRegex(), "")
+
+        // Concatenate selected words into a single sentence
+        val selectedSentence = selectedWords.joinToString(" ")
+
+        // Convert both the answer and selected sentence to lowercase for case-insensitive comparison
+        if (answer.lowercase() == selectedSentence.lowercase()) {
+            // Sentences match, handle correct answer
+            Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+        } else {
+            // Sentences don't match, handle incorrect answer
+            Toast.makeText(this, "Incorrect. The correct answer is: $answer", Toast.LENGTH_LONG).show()
+        }
     }
 }
