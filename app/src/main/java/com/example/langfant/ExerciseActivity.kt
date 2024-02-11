@@ -1,5 +1,6 @@
 package com.example.langfant
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -15,6 +16,8 @@ import java.io.InputStream
 class ExerciseActivity : AppCompatActivity() {
     private lateinit var exercises: JSONArray
     private var currentIndex = 0
+    private var selectedWords = mutableListOf<String>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
@@ -50,10 +53,17 @@ class ExerciseActivity : AppCompatActivity() {
             val layout: FlexboxLayout = findViewById(R.id.wordButtonsLayout)
             layout.removeAllViews() // Clear previous buttons
 
+            // Clear the list of selected words for each new exercise
+            selectedWords.clear()
+
             val words = answer.split(" ")
             for (word in words) {
                 val button = Button(this)
                 button.text = word
+                button.setOnClickListener {
+                    toggleWordSelection(button, word)
+                    updateSelectedWordsTextView()
+                }
                 layout.addView(button)
             }
         } else {
@@ -61,5 +71,25 @@ class ExerciseActivity : AppCompatActivity() {
             // For now, let's just display a toast message
             Toast.makeText(this, "No more exercises", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun toggleWordSelection(button: Button, word: String) {
+        // Toggle word selection by changing its background color
+        if (selectedWords.contains(word)) {
+            // Word is already selected, remove it
+            selectedWords.remove(word)
+            button.setTextColor(Color.BLACK)
+        } else {
+            // Word is not selected, add it
+            selectedWords.add(word)
+            button.setTextColor(Color.YELLOW)
+        }
+    }
+
+    private fun updateSelectedWordsTextView() {
+        // Display the selected words above the buttons
+        val selectedWordsText = selectedWords.joinToString(" ")
+        val selectedWordsTextView: TextView = findViewById(R.id.selectedWordsTextView)
+        selectedWordsTextView.text = selectedWordsText
     }
 }
