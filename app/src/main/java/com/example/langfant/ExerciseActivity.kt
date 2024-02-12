@@ -79,6 +79,7 @@ class ExerciseActivity : AppCompatActivity() {
 
             // Clear the list of selected words for each new exercise
             selectedWords.clear()
+            updateSelectedWordsTextView()
 
             val words = answer.split(" ")
             for (word in words) {
