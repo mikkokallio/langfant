@@ -93,8 +93,13 @@ class ExerciseActivity : AppCompatActivity() {
             updateSelectedWordsTextView()
 
             val words = answer.split(" ").toMutableList()
-            // Select additional words from the lesson's vocabulary
-            val additionalWords = vocabulary.filter { !words.contains(it) }.shuffled().take(words.size)
+
+            // Select a random exercise from the filtered list
+            val randomExercise = exercises.getJSONObject((0 until exercises.length()).random())
+            val randomExerciseAnswer = randomExercise.getString((if (englishToCroatian) "Croatian" else "English")).replace("[^\\p{L}\\s']".toRegex(), "")
+            val randomExerciseWords = randomExerciseAnswer.split(" ").map { it.trim() }
+            // Get additional words from the random exercise, excluding words from the current exercise's answer
+            val additionalWords = randomExerciseWords.filter { !words.contains(it) }
             // Add additional words to the shuffledWords list
             words.addAll(additionalWords)
             // Shuffle the list of words randomly
