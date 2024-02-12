@@ -1,5 +1,6 @@
 package com.example.langfant
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Html
@@ -93,8 +94,11 @@ class ExerciseActivity : AppCompatActivity() {
             }
         } else {
             // No more exercises, handle end of exercises
-            // For now, let's just display a toast message
             Toast.makeText(this, "No more exercises", Toast.LENGTH_SHORT).show()
+
+            // Navigate back to the lessons view
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 
