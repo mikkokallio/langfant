@@ -787,5 +787,1231 @@
   {
     "English": "Do you plan to study abroad next semester?",
     "Croatian": "Planirate li studirati u inozemstvu sljedeći semestar?"
+  },
+  {
+    "English": "I'm fine.",
+    "Croatian": "Dobro mi je."
+  },
+  {
+    "English": "It's close to me.",
+    "Croatian": "Blizu mi je."
+  },
+  {
+    "English": "It's far from me.",
+    "Croatian": "Daleko mi je."
+  },
+  {
+    "English": "It's easy for me.",
+    "Croatian": "Lako mi je."
+  },
+  {
+    "English": "It's hard for me.",
+    "Croatian": "Teško mi je."
+  },
+  {
+    "English": "I'm hot.",
+    "Croatian": "Vruće mi je."
+  },
+  {
+    "English": "I'm cold.",
+    "Croatian": "Hladno mi je."
+  },
+  {
+    "English": "I feel better.",
+    "Croatian": "Bolje mi je."
+  },
+  {
+    "English": "I feel nice.",
+    "Croatian": "Lijepo mi je."
+  },
+  {
+    "English": "This cat is black.",
+    "Croatian": "Ova mačka je crna.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a black cat.",
+    "Croatian": "Ovo je crna mačka.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That dog is friendly.",
+    "Croatian": "Taj pas je prijateljski.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a friendly dog.",
+    "Croatian": "To je prijateljski pas.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This book is interesting.",
+    "Croatian": "Ova knjiga je zanimljiva.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is an interesting book.",
+    "Croatian": "Ovo je zanimljiva knjiga.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That table is wooden.",
+    "Croatian": "Taj stol je drveni.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a wooden table.",
+    "Croatian": "To je drveni stol.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This chair is comfortable.",
+    "Croatian": "Ova stolica je udobna.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a comfortable chair.",
+    "Croatian": "Ovo je udobna stolica.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That pen is blue.",
+    "Croatian": "Ta olovka je plava.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a blue pen.",
+    "Croatian": "To je plava olovka.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This paper is white.",
+    "Croatian": "Ovaj papir je bijeli.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a white paper.",
+    "Croatian": "Ovo je bijeli papir.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That computer is new.",
+    "Croatian": "Taj računalo je novo.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a new computer.",
+    "Croatian": "To je novo računalo.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This phone is expensive.",
+    "Croatian": "Ovaj telefon je skup.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is an expensive phone.",
+    "Croatian": "Ovo je skupi telefon.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That door is open.",
+    "Croatian": "Ta vrata su otvorena.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is an open door.",
+    "Croatian": "To su otvorena vrata.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This window is broken.",
+    "Croatian": "Ovaj prozor je razbijen.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a broken window.",
+    "Croatian": "Ovo je razbijeni prozor.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That house is big.",
+    "Croatian": "Ta kuća je velika.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a big house.",
+    "Croatian": "To je velika kuća.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This car is fast.",
+    "Croatian": "Ovaj auto je brz.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a fast car.",
+    "Croatian": "Ovo je brzi auto.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That bike is red.",
+    "Croatian": "Taj bicikl je crveni.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a red bike.",
+    "Croatian": "To je crveni bicikl.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This boat is old.",
+    "Croatian": "Ovaj brod je star.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is an old boat.",
+    "Croatian": "Ovo je stari brod.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a cat.",
+    "Croatian": "To je mačka.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a dog.",
+    "Croatian": "To je pas.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a book.",
+    "Croatian": "To je knjiga.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a table.",
+    "Croatian": "To je stol.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a chair.",
+    "Croatian": "To je stolica.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a pen.",
+    "Croatian": "To je olovka.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a paper.",
+    "Croatian": "To je papir.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a computer.",
+    "Croatian": "To je računalo.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a phone.",
+    "Croatian": "To je telefon.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a door.",
+    "Croatian": "To je vrata.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a window.",
+    "Croatian": "To je prozor.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a house.",
+    "Croatian": "To je kuća.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a car.",
+    "Croatian": "To je auto.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a bike.",
+    "Croatian": "To je bicikl.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a boat.",
+    "Croatian": "To je brod.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a tree.",
+    "Croatian": "To je drvo.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a flower.",
+    "Croatian": "To je cvijet.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a river.",
+    "Croatian": "To je rijeka.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a mountain.",
+    "Croatian": "To je planina.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a beach.",
+    "Croatian": "To je plaža.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a lake.",
+    "Croatian": "To je jezero.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "That is a city.",
+    "Croatian": "To je grad.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a cat.",
+    "Croatian": "Ovo je mačka.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a dog.",
+    "Croatian": "Ovo je pas.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a book.",
+    "Croatian": "Ovo je knjiga.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a table.",
+    "Croatian": "Ovo je stol.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a chair.",
+    "Croatian": "Ovo je stolica.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a pen.",
+    "Croatian": "Ovo je olovka.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a paper.",
+    "Croatian": "Ovo je papir.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a computer.",
+    "Croatian": "Ovo je računalo.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a phone.",
+    "Croatian": "Ovo je telefon.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "This is a door.",
+    "Croatian": "Ovo je vrata.",
+    "Source": "ChatGPT"
+  },
+  {
+    "English": "Hi!",
+    "Croatian": "Bok!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Good morning!",
+    "Croatian": "Dobro jutro!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Good evening!",
+    "Croatian": "Dobro večer!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Welcome! (to greet someone)",
+    "Croatian": "Dobrodošli (pl), Dobrodošla (f), Dobrodošao (m)",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "How are you?",
+    "Croatian": "Kako si? / Kako ste? (polite)",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "I'm fine, thanks!",
+    "Croatian": "Dobro, hvala!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "And you?",
+    "Croatian": "A, ti? / A vi? (polite)",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Good/ So-So.",
+    "Croatian": "Dobro / Tako-tako!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Thank you (very much)!",
+    "Croatian": "Hvala!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "You're welcome! (for 'thank you')",
+    "Croatian": "Nema na čemu!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Hey! Friend!",
+    "Croatian": "Bok! Prijatelju!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "I missed you so much!",
+    "Croatian": "Puno si mi nedostajao / nedostajala (f)",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "What's new?",
+    "Croatian": "Šta ima novoga?",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Nothing much",
+    "Croatian": "Ništa novog",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Good night!",
+    "Croatian": "Laku noć!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "See you later!",
+    "Croatian": "Vidimo se kasnije!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Good bye!",
+    "Croatian": "Doviđenja!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "I'm lost",
+    "Croatian": "Izgubio / Izgubila (f) sam se",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Can I help you?",
+    "Croatian": "Mogu li ti / vam (polite) pomoći?",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Can you help me?",
+    "Croatian": "Možete li mi pomoći?",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Where is the (bathroom/ pharmacy)?",
+    "Croatian": "Gdje mogu naći (kupaonicu/ ljekarnu)?",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Go straight! then turn left/ right!",
+    "Croatian": "Odi / Odite (polite) ravno! Onda skreni/ Skrenite (polite) Lijevo/ Desno!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "I'm looking for john.",
+    "Croatian": "Tražim Johna!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "One moment please!",
+    "Croatian": "Molim vas da pričekate samo malo!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Hold on please! (phone)",
+    "Croatian": "Molim vas da pričekate malo!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "How much is this?",
+    "Croatian": "Koliko je ovo?",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Excuse me ...! (to ask for something)",
+    "Croatian": "Oprostite...!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Excuse me! (to pass by)",
+    "Croatian": "Ispričavam se!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Come with me!",
+    "Croatian": "Dođi/ Dođite (polite) sa mnom!",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Do you speak (English/ Croatian )?",
+    "Croatian": "Pričaš/ Pričate (polite) li (Engleski/ Hrvatski?",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "Just a little.",
+    "Croatian": "Nešto malo.",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "What's your name?",
+    "Croatian": "Kako se zoveš/ zovete (polite)?",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "My name is ...",
+    "Croatian": "Zovem se ...",
+    "Source": "Linguanaut"
+  },
+  {
+    "English": "the sooner the better",
+    "Croatian": "što ranije to bolje",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "as quickly as possible",
+    "Croatian": "što brže",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "what",
+    "Croatian": "što",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "What are you going to do to me?",
+    "Croatian": "Što ćeš mi učiniti?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "If that is correct, it must be that you know something that I don't.",
+    "Croatian": "Ako je to točno/tačno, mora biti da znaš nešto što ja ne znam.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "do you know me?",
+    "Croatian": "poznaješ li me?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "did you reach the destination?",
+    "Croatian": "jesi li stigao na odredište?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "have you seen him?",
+    "Croatian": "jeste li ga vid(j)eli",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "where could we be?",
+    "Croatian": "gdje li se samo nalazimo?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "when will he/they come?",
+    "Croatian": "kad li će doći?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "Is that so?",
+    "Croatian": "je li?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "I have no idea whether he came",
+    "Croatian": "nemam pojma je li došao",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "if",
+    "Croatian": "if",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "should you try to attack me, I'll strike you back",
+    "Croatian": "pokušaš li me napasti, ja ću ti uzvratiti",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "the snow just keeps falling and falling...",
+    "Croatian": "a sn(ij)eg pada li pada",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "the child just keeps crying and crying...",
+    "Croatian": "d(ij)ete plače li plače",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "It's so good!",
+    "Croatian": "Kako je dobro!",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "As the night went on, I was getting increasingly sleepier.",
+    "Croatian": "Kako je noć odmicala, sve sam više bio pospaniji.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "He moved here to find work.",
+    "Croatian": "Preselio se ovdje kako bi našao posao.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "In order for us to compete one day, we need to train a lot.",
+    "Croatian": "Kako bismo se jednog dana i mi mogli natjecati, moramo puno vježbati.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "why not?",
+    "Croatian": "zašto da ne?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "why is that?",
+    "Croatian": "zašto to?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "What date is it?",
+    "Croatian": "Koji je datum?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "Which car do you go to work with?",
+    "Croatian": "Kojim autom ideš na posao?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "I finally bought the dress that I've been telling you about.",
+    "Croatian": "Konačno sam kupila haljinu o kojoj sam ti govorila.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "May those who have any complaints step forward now.",
+    "Croatian": "Neka sada pristupe oni koji imaju ikakvih pritužbi.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "They saw the man whom the police were searching for.",
+    "Croatian": "Ugledali su čovjeka kojeg je tražila policija.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "Give me some helpful tips.",
+    "Croatian": "Daj mi koji koristan savjet.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "I was there only a few times.",
+    "Croatian": "Bio sam tamo samo koji put.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "The concert is in a few days",
+    "Croatian": "Koncert je za koji dan.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "What a fool you are!",
+    "Croatian": "Koji si ti glupan!",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "What the fuck happened to my car?",
+    "Croatian": "Koji se kurac dogodilo mom autu?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "When will you come?",
+    "Croatian": "Kad ćeš doći?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "I don't know when I will arrive at the meeting.",
+    "Croatian": "Ne znam kad ću stići na sastanak.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "The wind stopped blowing just when it began raining.",
+    "Croatian": "Vjetar je prestao puhati baš kad je počelo kišiti.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "If only I had a little more free time.",
+    "Croatian": "Kad bih samo imao malo više slobodnog vremena.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "whenever",
+    "Croatian": "kad god",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "rarely",
+    "Croatian": "malo kad",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "sooner or later",
+    "Croatian": "kad-tad",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "who knows when",
+    "Croatian": "tko zna kad",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "Have you ever been to Vienna?",
+    "Croatian": "Jesi li kad bio u Beču?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "I go to work sometimes by tram, and sometimes by bus.",
+    "Croatian": "Idem na posao kad tramvajem, kad autobusom.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "I didn't have enough time to call you.",
+    "Croatian": "Nisam imao kad da ti se javim.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "I should have gone to the shop already, but now I just hope I will have the time to.",
+    "Croatian": "Trebao sam već otići u trgovinu, a sad se samo nadam da ću imati kad.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "Where is your brother?",
+    "Croatian": "Gdje je tvoj brat?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "Where did you go yesterday?",
+    "Croatian": "Gdje si išao jučer?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "Who are you?",
+    "Croatian": "Tko si ti?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "anybody",
+    "Croatian": "bilo tko",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "very few people",
+    "Croatian": "malo tko",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "whoever",
+    "Croatian": "onaj tko",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "Doesn’t he/she know that?",
+    "Croatian": "Zar ne zna to?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "It’s cold, isn’t it?",
+    "Croatian": "Hladno je, zar ne?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "That isn’t such a bad idea, right?",
+    "Croatian": "To i nije tako loša ideja, zar ne?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "How much time do you have?",
+    "Croatian": "Koliko imaš vremena?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "What time is it?",
+    "Croatian": "Koliko je sati?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "How many times?",
+    "Croatian": "Koliko puta?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "For how long?",
+    "Croatian": "Koliko dugo?",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "Buy as many toys as there are children.",
+    "Croatian": "Kupite onoliko igračaka koliko je djece.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "He is almost as tall as I am.",
+    "Croatian": "On je skoro onoliko visok koliko i ja.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "No matter how much you give him, it's never enough!",
+    "Croatian": "Koliko god mu daš, nikad nije dosta!",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "As far as I know, that's no longer accepted as fact!",
+    "Croatian": "Koliko ja znam, to više nije prihvaćeno kao činjenica.",
+    "Source": "Wiktionary"
+  },
+  {
+    "English": "Welcome",
+    "Croatian": "Dobrodošli",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Hello (General greeting)",
+    "Croatian": "Bok",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Good Day",
+    "Croatian": "Dobar Dan",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "How are you?",
+    "Croatian": "Kako si? (inf)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "How are you?",
+    "Croatian": "Kako ste? (frm)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Reply to 'How are you?'",
+    "Croatian": "Hvala, dobro. A ti? (inf)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Reply to 'How are you?'",
+    "Croatian": "Hvala, dobro. A vi? (frm)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Long time no see",
+    "Croatian": "Dugo se nismo vidjeli",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "What's your name?",
+    "Croatian": "Kako se zoveš? (inf)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "What's your name?",
+    "Croatian": "Kako se zovete? (frm)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "My name is ...",
+    "Croatian": "Zovem se ...",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Where are you from?",
+    "Croatian": "Odakle si? (inf)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Where are you from?",
+    "Croatian": "Odakle ste? (frm)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "I'm from ...",
+    "Croatian": "Ja sam iz ...",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Pleased to meet you",
+    "Croatian": "Drago mi je",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Good morning (Morning greeting)",
+    "Croatian": "Dobro jutro",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Good afternoon (Afternoon greeting)",
+    "Croatian": "Dobar dan",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Good evening (Evening greeting)",
+    "Croatian": "Dobra večer",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Good night",
+    "Croatian": "Laku noć",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Goodbye (Parting phrases)",
+    "Croatian": "Zbogom",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Goodbye (Parting phrases)",
+    "Croatian": "Doviđenja",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Good luck!",
+    "Croatian": "Sretno",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Cheers! Good Health! (Toasts used when drinking)",
+    "Croatian": "Živjeli!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Cheers! Good Health! (Toasts used when drinking)",
+    "Croatian": "Uzdravlje!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Have a nice day",
+    "Croatian": "Lijep ti dan želim! (inf)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Have a nice day",
+    "Croatian": "Lijep Vam dan želim! (frm)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Bon appetit / Have a nice meal",
+    "Croatian": "Dobar tek!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Bon voyage / Have a good journey",
+    "Croatian": "Sretan put!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Do you understand?",
+    "Croatian": "Razumiješ? (inf)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Do you understand?",
+    "Croatian": "Razumijete? (frm)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "I understand",
+    "Croatian": "Razumijem",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "I don't understand",
+    "Croatian": "Ne razumijem",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Yes",
+    "Croatian": "Da",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "No",
+    "Croatian": "Ne",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Maybe",
+    "Croatian": "Možda",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "I don't know",
+    "Croatian": "Ne znam",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Please speak more slowly",
+    "Croatian": "Možeš li pričati sporije? (inf)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Please speak more slowly",
+    "Croatian": "Možete li pričati sporije? (frm)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Please write it down",
+    "Croatian": "Molim Vas, možete li mi to zapisati?",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Do you speak Croatian?",
+    "Croatian": "Govoriš li hrvatski? (inf)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Do you speak Croatian?",
+    "Croatian": "Govorite li hrvatski? (frm)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Yes, a little (reply to 'Do you speak ...?')",
+    "Croatian": "Da, (nešto) malo govorim hrvatski",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "I'm learning Croatian",
+    "Croatian": "Učim hrvatski",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Do you speak a language other than Croatian?",
+    "Croatian": "Govorite li neki drugi jezik osim hrvatskog? (frm)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Do you speak a language other than Croatian?",
+    "Croatian": "Govoriš li neki drugi jezik osim hrvatskog? (inf)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Speak to me in Croatian",
+    "Croatian": "Možeš razgovarati sa mnom na hrvatskom (inf)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Speak to me in Croatian",
+    "Croatian": "Možete razgovarati sa mnom na hrvatskom (frm)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "How do you say ... in Croatian?",
+    "Croatian": "Kako se kaže .... na hrvatskom?",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Excuse me",
+    "Croatian": "Oprostite!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Excuse me",
+    "Croatian": "Ispričavam se!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "How much is this?",
+    "Croatian": "Koliko je to?",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "How much is this?",
+    "Croatian": "Koliko košta ovo?",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Sorry",
+    "Croatian": "Žao mi je",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Sorry",
+    "Croatian": "Oprostite",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Please",
+    "Croatian": "Molim",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Thank you",
+    "Croatian": "Hvala",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Thank you very much",
+    "Croatian": "Hvala lijepa",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Reply to thank you",
+    "Croatian": "Nema na čemu",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Where's the toilet / bathroom?",
+    "Croatian": "Gdje je zahod?",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "This gentleman will pay for everything",
+    "Croatian": "Ovaj će gospodin sve platiti",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "This lady will pay for everything",
+    "Croatian": "Ova će gospođa sve platiti",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Would you like to dance with me? (>m)",
+    "Croatian": "Bi li htio plesati sa mnom? (>m)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Would you like to dance with me? (>f)",
+    "Croatian": "Bi li htjela plesati sa mnom (>f)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Do you come here often? (inf)",
+    "Croatian": "Dolaziš li često ovamo? (inf)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Do you come here often? (frm)",
+    "Croatian": "Dolazite li često ovamo? (frm)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "I love you",
+    "Croatian": "Volim te",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Get well soon (inf)",
+    "Croatian": "Ozdravi brzo! (inf)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Get well soon (frm)",
+    "Croatian": "Ozdravite brzo! (frm)",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Go away!",
+    "Croatian": "Pustite me na miru!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Leave me alone!",
+    "Croatian": "Pustite me na miru!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Help!",
+    "Croatian": "U pomoć!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Fire!",
+    "Croatian": "Požar!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Stop!",
+    "Croatian": "Stani!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Call the police!",
+    "Croatian": "Pozovite policiju!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Happy Christmas",
+    "Croatian": "Sretan Božić",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Merry Christmas",
+    "Croatian": "Čestit Božić",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Happy New Year",
+    "Croatian": "Sretna nova godina",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Easter greetings",
+    "Croatian": "Sretan Uskrs",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Birthday greetings",
+    "Croatian": "Sretan rođendan",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "Congratulations!",
+    "Croatian": "Čestitamo!",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "One language is never enough",
+    "Croatian": "Jedan jezik nikad nije dovoljan",
+    "Source": "Omniglot"
+  },
+  {
+    "English": "My hovercraft is full of eels",
+    "Croatian": "Moja je lebdjelica puna jegulja",
+    "Source": "Omniglot"
   }
 ]
