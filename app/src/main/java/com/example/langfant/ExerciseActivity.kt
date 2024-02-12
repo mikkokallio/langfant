@@ -2,6 +2,7 @@ package com.example.langfant
 
 import android.graphics.Color
 import android.os.Bundle
+import android.text.Html
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -15,16 +16,37 @@ import java.io.InputStream
 
 class ExerciseActivity : AppCompatActivity() {
     private lateinit var exercises: JSONArray
+    //private lateinit var lessonWords: List<String>
     private var currentIndex = 0
     private var selectedWords = mutableListOf<String>()
+    private var englishToCroatian = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
 
+        // Retrieve lesson words from intent
+        //lessonWords = intent.getStringArrayListExtra("lessonWords") ?: emptyList()
+// Convert array of strings to ArrayList<String>
+        val wordsArray = intent.getStringArrayExtra("lessonWords") ?: arrayOf()
+        val lessonWords = ArrayList<String>(wordsArray.toList())
+
         // Read JSON file
         val json = resources.openRawResource(R.raw.exercises).bufferedReader().use { it.readText() }
         exercises = JSONArray(json)
+
+        // Filter exercises based on the presence of lesson words
+        val filteredExercises = (0 until exercises.length())
+            .map { exercises.getJSONObject(it) }
+            .filter { exercise ->
+                val answer = exercise.getString("Croatian").replace("[^\\p{L}\\s']".toRegex(), "")
+                val answerWords = answer.split(" ").map { it.trim() }
+                answerWords.any { word -> lessonWords.contains(word) }
+            }
+
+        // Convert filtered exercises to JSONArray
+        exercises = JSONArray(filteredExercises.toString())
+        println(exercises)
 
         // Display initial exercise
         displayExercise(currentIndex)
@@ -38,6 +60,7 @@ class ExerciseActivity : AppCompatActivity() {
             // For now, let's just display the next exercise
             checkAnswer()
             currentIndex++
+            englishToCroatian = !englishToCroatian
             displayExercise(currentIndex)
         }
     }
@@ -45,8 +68,8 @@ class ExerciseActivity : AppCompatActivity() {
     private fun displayExercise(index: Int) {
         if (index < exercises.length()) {
             val exercise = exercises.getJSONObject(index)
-            val sentence = exercise.getString("sentence")
-            val answer = exercise.getString("answer").replace("[^\\p{L}\\s]".toRegex(), "")
+            val sentence = exercise.getString(if (englishToCroatian) "English" else "Croatian")
+            val answer = exercise.getString(if (englishToCroatian) "Croatian" else "English").replace("[^\\p{L}\\s']".toRegex(), "")
 
             val textSentence: TextView = findViewById(R.id.textSentence)
             textSentence.text = sentence
@@ -96,7 +119,7 @@ class ExerciseActivity : AppCompatActivity() {
 
     private fun checkAnswer() {
         val exercise = exercises.getJSONObject(currentIndex)
-        val answer = exercise.getString("answer").replace("[^\\p{L}\\s]".toRegex(), "")
+        val answer = exercise.getString(if (englishToCroatian) "Croatian" else "English").replace("[^\\p{L}\\s']".toRegex(), "")
 
         // Concatenate selected words into a single sentence
         val selectedSentence = selectedWords.joinToString(" ")
@@ -104,10 +127,10 @@ class ExerciseActivity : AppCompatActivity() {
         // Convert both the answer and selected sentence to lowercase for case-insensitive comparison
         if (answer.lowercase() == selectedSentence.lowercase()) {
             // Sentences match, handle correct answer
-            Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, Html.fromHtml("<big>Correct!</big>"), Toast.LENGTH_SHORT).show()
         } else {
             // Sentences don't match, handle incorrect answer
-            Toast.makeText(this, "Incorrect. The correct answer is: $answer", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, Html.fromHtml("<big>Incorrect. The correct answer is:<br/>$answer</big>"), Toast.LENGTH_LONG).show()
         }
     }
 }

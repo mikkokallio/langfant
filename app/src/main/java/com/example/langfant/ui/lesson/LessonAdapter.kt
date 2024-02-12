@@ -23,14 +23,14 @@ class LessonAdapter(private val lessons: List<Lesson>) :
         //val lessonWords: TextView = itemView.findViewById(R.id.lessonWords)
         val lessonDescription: TextView = itemView.findViewById(R.id.lessonDescription)
         val startButton: Button = itemView.findViewById(R.id.startButton)
-        init {
+        /*init {
             startButton.setOnClickListener {
                 // Handle button click here
                 val context = itemView.context
                 val intent = Intent(context, ExerciseActivity::class.java)
                 context.startActivity(intent)
             }
-        }
+        }*/
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LessonViewHolder {
@@ -61,13 +61,13 @@ class LessonAdapter(private val lessons: List<Lesson>) :
             expandedState[position] = !expandedState[position]
             notifyDataSetChanged()
         }
-
-        // Set OnClickListener for the Start button
-        /*holder.startButton.setOnClickListener {
-        // Navigate to the ExerciseActivity
-        val intent = Intent(context, ExerciseActivity::class.java)
-        context.startActivity(intent)
-        }*/
+        holder.startButton.setOnClickListener {
+            // Start ExerciseActivity and pass lesson words as extras
+            val intent = Intent(holder.itemView.context, ExerciseActivity::class.java)
+            val wordsArray = lessons[position].keywords.toTypedArray()
+            intent.putExtra("lessonWords", wordsArray) // Pass lesson words as extras
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = lessons.size

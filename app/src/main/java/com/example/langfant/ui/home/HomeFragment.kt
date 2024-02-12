@@ -10,15 +10,15 @@ import androidx.fragment.app.Fragment
 //import com.example.langfant.databinding.FragmentHomeBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.langfant.DatabaseHelper
 import com.example.langfant.R
 import com.example.langfant.ui.lesson.Lesson
 import com.example.langfant.ui.lesson.LessonAdapter
+import org.json.JSONArray
+import java.io.InputStream
 
 class HomeFragment : Fragment() {
 
     private lateinit var lessonAdapter: LessonAdapter
-    private lateinit var databaseHelper: DatabaseHelper
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,11 +28,7 @@ class HomeFragment : Fragment() {
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
         val lessonRecyclerView: RecyclerView = rootView.findViewById(R.id.lessonRecyclerView)
 
-        val databaseName = "Lessons.db"
-        context?.deleteDatabase(databaseName)
-
-        databaseHelper = DatabaseHelper(requireContext())
-        val lessonList = databaseHelper.getAllLessons()
+        val lessonList = loadLessonsFromJson()
 
         // Initialize the LessonAdapter with the lesson list
         lessonAdapter = LessonAdapter(lessonList)
@@ -42,5 +38,38 @@ class HomeFragment : Fragment() {
         lessonRecyclerView.adapter = lessonAdapter
 
         return rootView
+    }
+
+    private fun loadLessonsFromJson(): List<Lesson> {
+        val lessons = mutableListOf<Lesson>()
+
+        try {
+            val json = resources.openRawResource(R.raw.lessons).bufferedReader().use { it.readText() }
+            val jsonArray = JSONArray(json)
+
+            for (i in 0 until jsonArray.length()) {
+                val lessonJson = jsonArray.getJSONObject(i)
+                val name = lessonJson.getString("name")
+                //val imageResource = lessonJson.getInt("image_resource")
+                val description = lessonJson.getString("description")
+                val keywords = parseJsonArray(lessonJson.getJSONArray("keywords"))
+                val vocabulary = parseJsonArray(lessonJson.getJSONArray("vocabulary"))
+                val minWords = lessonJson.getInt("min_words")
+                val maxWords = lessonJson.getInt("max_words")
+
+                val lesson = Lesson(name, R.drawable.cat, description, keywords, vocabulary, minWords, maxWords)
+                lessons.add(lesson)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return lessons
+    }
+    private fun parseJsonArray(jsonArray: JSONArray): List<String> {
+        val list = mutableListOf<String>()
+        for (i in 0 until jsonArray.length()) {
+            list.add(jsonArray.getString(i))
+        }
+        return list
     }
 }

@@ -1,12 +1,791 @@
 [
   {
-    "prompt": "Translate the following sentence:",
-    "sentence": "This is an example sentence.",
-    "answer": "Ovo je moj prijatelj Mojo Ovo je primjer rečenice hej jej vej."
+    "English": "Hello.",
+    "Croatian": "Bok."
   },
   {
-    "prompt": "Translate the following sentence:",
-    "sentence": "Another example sentence.",
-    "answer": "Još jedna primjer rečenica."
+    "English": "Good morning.",
+    "Croatian": "Dobro jutro."
+  },
+  {
+    "English": "Good afternoon.",
+    "Croatian": "Dobar dan."
+  },
+  {
+    "English": "Good evening.",
+    "Croatian": "Dobra večer."
+  },
+  {
+    "English": "Goodbye.",
+    "Croatian": "Doviđenja."
+  },
+  {
+    "English": "Yes.",
+    "Croatian": "Da."
+  },
+  {
+    "English": "No.",
+    "Croatian": "Ne."
+  },
+  {
+    "English": "Please.",
+    "Croatian": "Molim."
+  },
+  {
+    "English": "Thank you.",
+    "Croatian": "Hvala."
+  },
+  {
+    "English": "You're welcome.",
+    "Croatian": "Nema na čemu."
+  },
+  {
+    "English": "Excuse me.",
+    "Croatian": "Oprostite."
+  },
+  {
+    "English": "Sorry.",
+    "Croatian": "Žao mi je."
+  },
+  {
+    "English": "How are you?",
+    "Croatian": "Kako si?"
+  },
+  {
+    "English": "I'm fine.",
+    "Croatian": "Dobro sam."
+  },
+  {
+    "English": "What's your name?",
+    "Croatian": "Kako se zoveš?"
+  },
+  {
+    "English": "My name is John.",
+    "Croatian": "Zovem se Ivan."
+  },
+  {
+    "English": "Nice to meet you.",
+    "Croatian": "Drago mi je."
+  },
+  {
+    "English": "Where are you from?",
+    "Croatian": "Odakle si?"
+  },
+  {
+    "English": "I'm from Croatia.",
+    "Croatian": "Iz Hrvatske sam."
+  },
+  {
+    "English": "How old are you?",
+    "Croatian": "Koliko imaš godina?"
+  },
+  {
+    "English": "I'm 25 years old.",
+    "Croatian": "Imam 25 godina."
+  },
+  {
+    "English": "What time is it?",
+    "Croatian": "Koliko je sati?"
+  },
+  {
+    "English": "It's 3 o'clock.",
+    "Croatian": "Sada je tri sata."
+  },
+  {
+    "English": "Where is the bathroom?",
+    "Croatian": "Gdje je kupaonica?"
+  },
+  {
+    "English": "Can you help me?",
+    "Croatian": "Možeš li mi pomoći?"
+  },
+  {
+    "English": "I don't understand.",
+    "Croatian": "Ne razumijem."
+  },
+  {
+    "English": "Please speak slowly.",
+    "Croatian": "Molim te, govori polako."
+  },
+  {
+    "English": "What is this?",
+    "Croatian": "Što je ovo?"
+  },
+  {
+    "English": "How much does it cost?",
+    "Croatian": "Koliko košta?"
+  },
+  {
+    "English": "I want to buy this.",
+    "Croatian": "Želim kupiti ovo."
+  },
+  {
+    "English": "Where is the nearest bank?",
+    "Croatian": "Gdje je najbliža banka?"
+  },
+  {
+    "English": "Is there a pharmacy nearby?",
+    "Croatian": "Ima li u blizini ljekarna?"
+  },
+  {
+    "English": "I am hungry.",
+    "Croatian": "Gladan sam."
+  },
+  {
+    "English": "I am thirsty.",
+    "Croatian": "Žedan sam."
+  },
+  {
+    "English": "I am tired.",
+    "Croatian": "Umoran sam."
+  },
+  {
+    "English": "I am cold.",
+    "Croatian": "Hladno mi je."
+  },
+  {
+    "English": "I am hot.",
+    "Croatian": "Vruće mi je."
+  },
+  {
+    "English": "I am happy.",
+    "Croatian": "Sretan sam."
+  },
+  {
+    "English": "I am sad.",
+    "Croatian": "Tužan sam."
+  },
+  {
+    "English": "I am busy.",
+    "Croatian": "Zauzet sam."
+  },
+  {
+    "English": "I am bored.",
+    "Croatian": "Dosadno mi je."
+  },
+  {
+    "English": "I am lost.",
+    "Croatian": "Izgubljen sam."
+  },
+  {
+    "English": "I am sick.",
+    "Croatian": "Bolestan sam."
+  },
+  {
+    "English": "I am fine.",
+    "Croatian": "Dobro sam."
+  },
+  {
+    "English": "I am not sure.",
+    "Croatian": "Nisam siguran."
+  },
+  {
+    "English": "I am ready.",
+    "Croatian": "Spreman sam."
+  },
+  {
+    "English": "I am here.",
+    "Croatian": "Ovdje sam."
+  },
+  {
+    "English": "I am there.",
+    "Croatian": "Ondje sam."
+  },
+  {
+    "English": "I am sorry.",
+    "Croatian": "Žao mi je."
+  },
+  {
+    "English": "I am not ready.",
+    "Croatian": "Nisam spreman."
+  },
+  {
+    "English": "I am not sure.",
+    "Croatian": "Nisam siguran."
+  },
+  {
+    "English": "The cat is black.",
+    "Croatian": "Mačka je crna."
+  },
+  {
+    "English": "The dog is brown.",
+    "Croatian": "Pas je smeđ."
+  },
+  {
+    "English": "The sky is blue.",
+    "Croatian": "Nebo je plavo."
+  },
+  {
+    "English": "The sun is bright.",
+    "Croatian": "Sunce je svijetlo."
+  },
+  {
+    "English": "The grass is green.",
+    "Croatian": "Trava je zelena."
+  },
+  {
+    "English": "The tree is tall.",
+    "Croatian": "Drvo je visoko."
+  },
+  {
+    "English": "The flower is red.",
+    "Croatian": "Cvijet je crven."
+  },
+  {
+    "English": "The water is clear.",
+    "Croatian": "Voda je čista."
+  },
+  {
+    "English": "The snow is white.",
+    "Croatian": "Snijeg je bijel."
+  },
+  {
+    "English": "The mountain is high.",
+    "Croatian": "Planina je visoka."
+  },
+  {
+    "English": "The beach is sandy.",
+    "Croatian": "Plaža je pjeskovita."
+  },
+  {
+    "English": "The ocean is vast.",
+    "Croatian": "Ocean je prostran."
+  },
+  {
+    "English": "The moon is bright.",
+    "Croatian": "Mjesec je svijetlo."
+  },
+  {
+    "English": "The stars are twinkling.",
+    "Croatian": "Zvijezde sjaje."
+  },
+  {
+    "English": "The city is bustling.",
+    "Croatian": "Grad je užurban."
+  },
+  {
+    "English": "The road is narrow.",
+    "Croatian": "Cesta je uska."
+  },
+  {
+    "English": "The bridge is sturdy.",
+    "Croatian": "Most je čvrst."
+  },
+  {
+    "English": "The building is tall.",
+    "Croatian": "Zgrada je visoka."
+  },
+  {
+    "English": "The car is fast.",
+    "Croatian": "Auto je brz."
+  },
+  {
+    "English": "The bike is rusty.",
+    "Croatian": "Bicikl je hrđav."
+  },
+  {
+    "English": "The boat is wooden.",
+    "Croatian": "Brod je drven."
+  },
+  {
+    "English": "The house is cozy.",
+    "Croatian": "Kuća je udobna."
+  },
+  {
+    "English": "The door is closed.",
+    "Croatian": "Vrata su zatvorena."
+  },
+  {
+    "English": "The window is open.",
+    "Croatian": "Prozor je otvoren."
+  },
+  {
+    "English": "The table is round.",
+    "Croatian": "Stol je okrugli."
+  },
+  {
+    "English": "The chair is sturdy.",
+    "Croatian": "Stolica je čvrsta."
+  },
+  {
+    "English": "The book is thick.",
+    "Croatian": "Knjiga je debela."
+  },
+  {
+    "English": "The pen is blue.",
+    "Croatian": "Olovka je plava."
+  },
+  {
+    "English": "The paper is white.",
+    "Croatian": "Papir je bijel."
+  },
+  {
+    "English": "The computer is new.",
+    "Croatian": "Računalo je novo."
+  },
+  {
+    "English": "The phone is old.",
+    "Croatian": "Telefon je star."
+  },
+
+  {
+    "English": "The cat is black.",
+    "Croatian": "Mačka je crna."
+  },
+  {
+    "English": "The dog is white.",
+    "Croatian": "Pas je bijel."
+  },
+  {
+    "English": "The man is old.",
+    "Croatian": "Čovjek je star."
+  },
+  {
+    "English": "The woman is young.",
+    "Croatian": "Žena je mlada."
+  },
+  {
+    "English": "The house is big.",
+    "Croatian": "Kuća je velika."
+  },
+  {
+    "English": "The car is red.",
+    "Croatian": "Auto je crveni."
+  },
+  {
+    "English": "The flower is beautiful.",
+    "Croatian": "Cvijet je lijep."
+  },
+  {
+    "English": "The sky is blue.",
+    "Croatian": "Nebo je plavo."
+  },
+  {
+    "English": "The table is brown.",
+    "Croatian": "Stol je smeđi."
+  },
+  {
+    "English": "The chair is comfortable.",
+    "Croatian": "Stolica je udobna."
+  },
+  {
+    "English": "The cat is sleeping.",
+    "Croatian": "Mačka spava."
+  },
+  {
+    "English": "The dog is barking.",
+    "Croatian": "Pas laje."
+  },
+  {
+    "English": "The man is working.",
+    "Croatian": "Čovjek radi."
+  },
+  {
+    "English": "The woman is cooking.",
+    "Croatian": "Žena kuha."
+  },
+  {
+    "English": "The house is quiet.",
+    "Croatian": "Kuća je tiha."
+  },
+  {
+    "English": "The car is fast.",
+    "Croatian": "Auto je brz."
+  },
+  {
+    "English": "The flower is fragrant.",
+    "Croatian": "Cvijet je mirisan."
+  },
+  {
+    "English": "The sky is clear.",
+    "Croatian": "Nebo je vedro."
+  },
+  {
+    "English": "The table is sturdy.",
+    "Croatian": "Stol je čvrst."
+  },
+  {
+    "English": "The chair is elegant.",
+    "Croatian": "Stolica je elegantna."
+  },
+  {
+    "English": "I have a cat.",
+    "Croatian": "Imam mačku."
+  },
+  {
+    "English": "You have a dog.",
+    "Croatian": "Imaš psa."
+  },
+  {
+    "English": "He has a car.",
+    "Croatian": "On ima auto."
+  },
+  {
+    "English": "She has a bike.",
+    "Croatian": "Ona ima bicikl."
+  },
+  {
+    "English": "They have a house.",
+    "Croatian": "Oni imaju kuću."
+  },
+  {
+    "English": "We have a garden.",
+    "Croatian": "Mi imamo vrt."
+  },
+  {
+    "English": "It has a tail.",
+    "Croatian": "Ono ima rep."
+  },
+  {
+    "English": "The cat has claws.",
+    "Croatian": "Mačka ima kandže."
+  },
+  {
+    "English": "The dog has a collar.",
+    "Croatian": "Pas ima ovratnik."
+  },
+  {
+    "English": "The car has four wheels.",
+    "Croatian": "Auto ima četiri kotača."
+  },
+  {
+    "English": "The bike has pedals.",
+    "Croatian": "Bicikl ima pedale."
+  },
+  {
+    "English": "The house has a roof.",
+    "Croatian": "Kuća ima krov."
+  },
+  {
+    "English": "The garden has flowers.",
+    "Croatian": "Vrt ima cvijeće."
+  },
+  {
+    "English": "The tail is long.",
+    "Croatian": "Rep je dug."
+  },
+  {
+    "English": "The claws are sharp.",
+    "Croatian": "Kandže su oštre."
+  },
+  {
+    "English": "The collar is blue.",
+    "Croatian": "Ovratnik je plav."
+  },
+  {
+    "English": "The wheels are round.",
+    "Croatian": "Kotači su okrugli."
+  },
+  {
+    "English": "The pedals are black.",
+    "Croatian": "Pedale su crne."
+  },
+  {
+    "English": "The roof is tiled.",
+    "Croatian": "Krov je pokriven crijepom."
+  },
+  {
+    "English": "The flowers are colorful.",
+    "Croatian": "Cvijeće je šareno."
+  },
+  {
+    "English": "The cat eats fish.",
+    "Croatian": "Mačka jede ribu."
+  },
+  {
+    "English": "The dog barks loudly.",
+    "Croatian": "Pas glasno laje."
+  },
+  {
+    "English": "The car drives fast.",
+    "Croatian": "Auto vozi brzo."
+  },
+  {
+    "English": "The bike rides smoothly.",
+    "Croatian": "Bicikl vozi glatko."
+  },
+  {
+    "English": "The house stands tall.",
+    "Croatian": "Kuća stoji visoko."
+  },
+  {
+    "English": "The garden blooms beautifully.",
+    "Croatian": "Vrt lijepo cvjeta."
+  },
+  {
+    "English": "The tail wags happily.",
+    "Croatian": "Rep sretno maše."
+  },
+  {
+    "English": "The claws scratch softly.",
+    "Croatian": "Kandže lagano grebu."
+  },
+  {
+    "English": "The collar shines brightly.",
+    "Croatian": "Ovratnik sjaji svijetlo."
+  },
+  {
+    "English": "The wheels spin smoothly.",
+    "Croatian": "Kotači se glatko vrte."
+  },
+  {
+    "English": "The pedals move quickly.",
+    "Croatian": "Pedale se brzo kreću."
+  },
+  {
+    "English": "The roof protects well.",
+    "Croatian": "Krov dobro štiti."
+  },
+  {
+    "English": "The flowers smell sweetly.",
+    "Croatian": "Cvijeće lijepo miriše."
+  },
+  {
+    "English": "The cat chases mice.",
+    "Croatian": "Mačka lovi miševe."
+  },
+  {
+    "English": "The dog guards the house.",
+    "Croatian": "Pas čuva kuću."
+  },
+  {
+    "English": "The car honks loudly.",
+    "Croatian": "Auto glasno trubi."
+  },
+  {
+    "English": "The bike speeds down the hill.",
+    "Croatian": "Bicikl se brzo spušta niz brdo."
+  },
+  {
+    "English": "The house welcomes guests warmly.",
+    "Croatian": "Kuća toplo dočekuje goste."
+  },
+  {
+    "English": "The garden attracts butterflies gracefully.",
+    "Croatian": "Vrt graciozno privlači leptire."
+  },
+  {
+    "English": "The tail sways gently.",
+    "Croatian": "Rep nježno maše."
+  },
+  {
+    "English": "The claws retract slowly.",
+    "Croatian": "Kandže se polako povlače."
+  },
+  {
+    "English": "The collar clasps tightly.",
+    "Croatian": "Ovratnik čvrsto steže."
+  },
+  {
+    "English": "The wheels roll smoothly.",
+    "Croatian": "Kotači se glatko kotrljaju."
+  },
+  {
+    "English": "The pedals push firmly.",
+    "Croatian": "Pedale snažno guraju."
+  },
+  {
+    "English": "The roof leaks during the rain.",
+    "Croatian": "Krov prokišnjava za vrijeme kiše."
+  },
+  {
+    "English": "The flowers wilt in the heat.",
+    "Croatian": "Cvijeće vene na vrućini."
+  },
+  {
+    "English": "The cat purrs contentedly.",
+    "Croatian": "Mačka zadovoljno prede."
+  },
+  {
+    "English": "The dog plays joyfully.",
+    "Croatian": "Pas se veselo igra."
+  },
+  {
+    "English": "The car parks neatly.",
+    "Croatian": "Auto se uredno parkira."
+  },
+  {
+    "English": "The bike coasts silently.",
+    "Croatian": "Bicikl tiho klizi."
+  },
+  {
+    "English": "I want to learn Croatian.",
+    "Croatian": "Želim naučiti hrvatski."
+  },
+  {
+    "English": "She needs to buy groceries.",
+    "Croatian": "Ona treba kupiti namirnice."
+  },
+  {
+    "English": "Do you like to travel?",
+    "Croatian": "Volite li putovati?"
+  },
+  {
+    "English": "We have to clean the house.",
+    "Croatian": "Moramo očistiti kuću."
+  },
+  {
+    "English": "He plans to visit his family.",
+    "Croatian": "On planira posjetiti obitelj."
+  },
+  {
+    "English": "She enjoys dancing in the rain.",
+    "Croatian": "Ona uživa plesati po kiši."
+  },
+  {
+    "English": "They like to swim in the sea.",
+    "Croatian": "Oni vole plivati u moru."
+  },
+  {
+    "English": "You should read this book.",
+    "Croatian": "Trebate pročitati ovu knjigu."
+  },
+  {
+    "English": "I love to cook.",
+    "Croatian": "Volim kuhati."
+  },
+  {
+    "English": "We want to see the world.",
+    "Croatian": "Želimo vidjeti svijet."
+  },
+  {
+    "English": "Do you need to study for the test?",
+    "Croatian": "Trebate li učiti za ispit?"
+  },
+  {
+    "English": "He likes to play basketball.",
+    "Croatian": "On voli igrati košarku."
+  },
+  {
+    "English": "She plans to visit Paris next summer.",
+    "Croatian": "Ona planira posjetiti Pariz sljedećeg ljeta."
+  },
+  {
+    "English": "They enjoy hiking in the mountains.",
+    "Croatian": "Oni uživaju u planinarenju."
+  },
+  {
+    "English": "I need to finish my homework.",
+    "Croatian": "Treba mi završiti zadaću."
+  },
+  {
+    "English": "Do you like to listen to music?",
+    "Croatian": "Volite li slušati glazbu?"
+  },
+  {
+    "English": "We want to travel the world together.",
+    "Croatian": "Želimo putovati svijetom zajedno."
+  },
+  {
+    "English": "They have to go to the dentist.",
+    "Croatian": "Oni moraju ići stomatologu."
+  },
+  {
+    "English": "She enjoys reading books in her free time.",
+    "Croatian": "Ona uživa čitati knjige u slobodno vrijeme."
+  },
+  {
+    "English": "He likes to watch movies on weekends.",
+    "Croatian": "On voli gledati filmove vikendom."
+  },
+  {
+    "English": "You need to practice speaking Croatian.",
+    "Croatian": "Trebate vježbati govoriti hrvatski."
+  },
+  {
+    "English": "I plan to study abroad next year.",
+    "Croatian": "Planiram studirati u inozemstvu iduće godine."
+  },
+  {
+    "English": "We want to learn how to surf.",
+    "Croatian": "Želimo naučiti surfati."
+  },
+  {
+    "English": "They need to buy new shoes.",
+    "Croatian": "Oni trebaju kupiti nove cipele."
+  },
+  {
+    "English": "She loves to sing in the choir.",
+    "Croatian": "Ona voli pjevati u zboru."
+  },
+  {
+    "English": "He enjoys playing the guitar.",
+    "Croatian": "On uživa svirati gitaru."
+  },
+  {
+    "English": "Do you plan to travel this summer?",
+    "Croatian": "Planirate li putovati ovog ljeta?"
+  },
+  {
+    "English": "We need to finish this project by Friday.",
+    "Croatian": "Moramo završiti ovaj projekt do petka."
+  },
+  {
+    "English": "They want to start a new business.",
+    "Croatian": "Oni žele započeti novi posao."
+  },
+  {
+    "English": "You should try this cake, it's delicious.",
+    "Croatian": "Trebate probati ovu tortu, ukusna je."
+  },
+  {
+    "English": "I plan to visit my grandparents next weekend.",
+    "Croatian": "Planiram posjetiti bake i djeda sljedeći vikend."
+  },
+  {
+    "English": "We want to adopt a dog from the shelter.",
+    "Croatian": "Želimo udomiti psa iz skloništa."
+  },
+  {
+    "English": "They need to find a new apartment.",
+    "Croatian": "Oni trebaju pronaći novi stan."
+  },
+  {
+    "English": "She likes to write poems in her notebook.",
+    "Croatian": "Ona voli pisati pjesme u svojoj bilježnici."
+  },
+  {
+    "English": "He enjoys taking photographs of nature.",
+    "Croatian": "On uživa fotografirati prirodu."
+  },
+  {
+    "English": "Do you want to go to the movies tonight?",
+    "Croatian": "Želite li ići u kino večeras?"
+  },
+  {
+    "English": "We need to clean the garage this weekend.",
+    "Croatian": "Moramo očistiti garažu ovog vikenda."
+  },
+  {
+    "English": "They plan to move to a different city next year.",
+    "Croatian": "Oni planiraju preseliti se u drugi grad iduće godine."
+  },
+  {
+    "English": "You should go to bed earlier.",
+    "Croatian": "Trebate ići spavati ranije."
+  },
+  {
+    "English": "I want to learn how to cook pasta.",
+    "Croatian": "Želim naučiti kuhati tjesteninu."
+  },
+  {
+    "English": "We plan to visit the museum tomorrow.",
+    "Croatian": "Planiramo posjetiti muzej sutra."
+  },
+  {
+    "English": "They enjoy traveling by train.",
+    "Croatian": "Oni uživaju putovati vlakom."
+  },
+  {
+    "English": "She needs to go to the bank.",
+    "Croatian": "Ona treba otići u banku."
+  },
+  {
+    "English": "He wants to read the new book by his favorite author.",
+    "Croatian": "On želi pročitati novu knjigu svog omiljenog autora."
+  },
+  {
+    "English": "Do you plan to study abroad next semester?",
+    "Croatian": "Planirate li studirati u inozemstvu sljedeći semestar?"
   }
 ]
