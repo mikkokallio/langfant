@@ -23,6 +23,8 @@ class ExerciseActivity : AppCompatActivity() {
     private var selectedWords = mutableListOf<String>()
     private var englishToCroatian = true
     private lateinit var progressBar: ProgressBar
+    private lateinit var keywords: MutableList<String>
+    private lateinit var vocabulary: MutableList<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,9 +33,11 @@ class ExerciseActivity : AppCompatActivity() {
         // Initialize progress bar
         progressBar = findViewById<ProgressBar>(R.id.progressBar)
 
-        // Retrieve lesson words from intent
-        val wordsArray = intent.getStringArrayExtra("lessonWords") ?: arrayOf()
-        val lessonWords = ArrayList<String>(wordsArray.toList())
+        // Retrieve keywords and vocabulary from intent
+        val keywordsArray = intent.getStringArrayExtra("keywords") ?: arrayOf()
+        keywords = ArrayList<String>(keywordsArray.toList())
+        val vocabularyArray = intent.getStringArrayExtra("vocabulary") ?: arrayOf()
+        vocabulary = ArrayList<String>(vocabularyArray.toList())
 
         // Read JSON file
         val json = resources.openRawResource(R.raw.exercises).bufferedReader().use { it.readText() }
@@ -45,7 +49,7 @@ class ExerciseActivity : AppCompatActivity() {
             .filter { exercise ->
                 val answer = exercise.getString("Croatian").replace("[^\\p{L}\\s']".toRegex(), "")
                 val answerWords = answer.split(" ").map { it.trim() }
-                answerWords.any { word -> lessonWords.contains(word) }
+                answerWords.any { word -> keywords.contains(word) }
             }
 
         // Convert filtered exercises to JSONArray
@@ -88,8 +92,15 @@ class ExerciseActivity : AppCompatActivity() {
             selectedWords.clear()
             updateSelectedWordsTextView()
 
-            val words = answer.split(" ")
-            for (word in words) {
+            val words = answer.split(" ").toMutableList()
+            // Select additional words from the lesson's vocabulary
+            val additionalWords = vocabulary.filter { !words.contains(it) }.shuffled().take(words.size)
+            // Add additional words to the shuffledWords list
+            words.addAll(additionalWords)
+            // Shuffle the list of words randomly
+            val shuffledWords = words.shuffled()
+
+            for (word in shuffledWords) {
                 val button = Button(this)
                 button.text = word
                 button.setOnClickListener {
