@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Html
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -159,6 +160,10 @@ class ExerciseActivity : AppCompatActivity() {
         if (answer.lowercase() == selectedSentence.lowercase()) {
             // Sentences match, handle correct answer
             Toast.makeText(this, Html.fromHtml("<big>Correct!</big>"), Toast.LENGTH_SHORT).show()
+            // Flash and grow animation for the progress bar
+            val progressBar = findViewById<ProgressBar>(R.id.progressBar)
+            val animation = AnimationUtils.loadAnimation(this, R.anim.progress_bar_animation)
+            progressBar.startAnimation(animation)
         } else {
             // Sentences don't match, handle incorrect answer
             Toast.makeText(this, Html.fromHtml("<big>Incorrect. The correct answer is:<br/>$answer</big>"), Toast.LENGTH_LONG).show()
