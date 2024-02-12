@@ -52,8 +52,12 @@ class ExerciseActivity : AppCompatActivity() {
                 answerWords.any { word -> keywords.contains(word) }
             }
 
+        // Shuffle the filteredExercises and take the first 15 exercises
+        val shuffledExercises = filteredExercises.shuffled()
+        val limitedExercises = shuffledExercises.take(15)
+
         // Convert filtered exercises to JSONArray
-        exercises = JSONArray(filteredExercises.toString())
+        exercises = JSONArray(limitedExercises.toString())
         progressBar.max = exercises.length()
         progressBar.progress = 0
         println(exercises)
