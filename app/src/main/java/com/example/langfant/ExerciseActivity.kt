@@ -7,6 +7,7 @@ import android.text.Html
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -21,14 +22,16 @@ class ExerciseActivity : AppCompatActivity() {
     private var currentIndex = 0
     private var selectedWords = mutableListOf<String>()
     private var englishToCroatian = true
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
 
+        // Initialize progress bar
+        progressBar = findViewById<ProgressBar>(R.id.progressBar)
+
         // Retrieve lesson words from intent
-        //lessonWords = intent.getStringArrayListExtra("lessonWords") ?: emptyList()
-// Convert array of strings to ArrayList<String>
         val wordsArray = intent.getStringArrayExtra("lessonWords") ?: arrayOf()
         val lessonWords = ArrayList<String>(wordsArray.toList())
 
@@ -47,6 +50,8 @@ class ExerciseActivity : AppCompatActivity() {
 
         // Convert filtered exercises to JSONArray
         exercises = JSONArray(filteredExercises.toString())
+        progressBar.max = exercises.length()
+        progressBar.progress = 0
         println(exercises)
 
         // Display initial exercise
@@ -61,6 +66,7 @@ class ExerciseActivity : AppCompatActivity() {
             // For now, let's just display the next exercise
             checkAnswer()
             currentIndex++
+            progressBar.progress = currentIndex
             englishToCroatian = !englishToCroatian
             displayExercise(currentIndex)
         }

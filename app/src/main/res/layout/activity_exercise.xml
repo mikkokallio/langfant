@@ -7,12 +7,21 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Segmented Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/segmented_progress_bar"/>
+
     <!-- Prompt TextView -->
     <TextView
         android:id="@+id/textPrompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:text="Translate the following sentence:"
         android:textSize="18sp" />
@@ -25,7 +34,7 @@
         android:layout_below="@id/textPrompt"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="This is an example sentence."
+        android:text="Oops! You shouldn't be seeing this."
         android:textSize="24sp" />
 
     <!-- Selected Words TextView -->
