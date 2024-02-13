@@ -14,6 +14,7 @@ import com.example.langfant.R
 import com.example.langfant.ui.lesson.Lesson
 import com.example.langfant.ui.lesson.LessonAdapter
 import org.json.JSONArray
+import org.json.JSONObject
 import java.io.InputStream
 
 class HomeFragment : Fragment() {
@@ -53,11 +54,10 @@ class HomeFragment : Fragment() {
                 //val imageResource = lessonJson.getInt("image_resource")
                 val description = lessonJson.getString("description")
                 val keywords = parseJsonArray(lessonJson.getJSONArray("keywords"))
-                val vocabulary = parseJsonArray(lessonJson.getJSONArray("vocabulary"))
-                val minWords = lessonJson.getInt("min_words")
+                val vocabulary = parseJsonObject(lessonJson.getJSONObject("vocabulary"))
                 val maxWords = lessonJson.getInt("max_words")
 
-                val lesson = Lesson(name, R.drawable.cat, description, keywords, vocabulary, minWords, maxWords)
+                val lesson = Lesson(name, R.drawable.cat, description, "word-match", keywords, vocabulary, maxWords)
                 lessons.add(lesson)
             }
         } catch (e: Exception) {
@@ -71,5 +71,15 @@ class HomeFragment : Fragment() {
             list.add(jsonArray.getString(i))
         }
         return list
+    }
+    private fun parseJsonObject(jsonObject: JSONObject): MutableMap<String, String> {
+        val obj = mutableMapOf<String, String>()
+        val keys = jsonObject.keys()
+        while (keys.hasNext()) {
+            val key = keys.next()
+            val value = jsonObject.getString(key)
+            obj[key] = value
+        }
+        return obj
     }
 }

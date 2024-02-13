@@ -4,8 +4,8 @@ data class Lesson(
     val name: String,
     val imageResource: Int,
     val description: String,
+    val type: String,
     val keywords: List<String>,
-    val vocabulary: List<String>,
-    val minWords: Int,
+    val vocabulary: Map<String, String>,
     val maxWords: Int
     )

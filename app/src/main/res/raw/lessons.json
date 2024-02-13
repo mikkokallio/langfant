@@ -1,191 +1,48 @@
 [
   {
+    "id": 101,
+    "name": "Cats and dogs!",
+    "image_resource": "R.drawable.cat",
+    "description": "Learn some basic words and form simple sentences",
+    "type": "word-match",
+    "keywords": [],
+    "vocabulary": {"mačka": "cat", "pas": "dog", "auto": "car", "bicikl": "bike", "kuća": "house", "škola": "school", "stol": "table", "stolica": "chair", "knjiga": "book", "telefon": "phone", "čovjek": "man", "žena": "woman", "hrana": "food", "voda": "water", "voće": "fruit", "cvijet": "flower", "ulica": "street", "grad": "city"},
+    "max_words": 3,
+    "depends_on": []
+  },
+  {
+    "id": 666,
     "name": "The cat is black",
     "image_resource": "R.drawable.cat",
     "description": "Learn some basic words and form simple sentences",
     "keywords": ["je"],
-    "vocabulary": ["je", "čovjek", "pas", "mačka", "sretan", "lijep", "star", "crna", "kuća", "auto", "cvijet", "more", "planina", "životinja", "ptica", "zelena", "mala", "velika", "topla", "hladna", "lijepa", "ružna", "brza", "spora"],
-    "min_words": 3,
-    "max_words": 3
+    "type": "translation",
+    "vocabulary": {"je": "is"},
+    "max_words": 3,
+    "depends_on": []
   },
   {
-    "name": "Greetings and Introductions",
-    "image_resource": "R.drawable.greetings",
-    "description": "Learn common greetings and how to introduce yourself",
-    "keywords": ["zdravo", "dobro jutro", "dobar dan", "dobro veče", "kako si?", "ja sam", "ime", "prezime"],
-    "vocabulary": ["zdravo", "dobro jutro", "dobar dan", "dobro veče", "kako si?", "ja sam", "ime", "prezime", "hvala", "molim"],
-    "min_words": 2,
-    "max_words": 5
+    "id": 667,
+    "name": "What???",
+    "image_resource": "R.drawable.cat",
+    "description": "Learn the word 'što'.",
+    "keywords": ["što"],
+    "vocabulary": {"što": "what"},
+    "type": "translation",
+    "max_words": 3,
+    "depends_on": []
   },
   {
-    "name": "Numbers and Counting",
-    "image_resource": "R.drawable.numbers",
-    "description": "Learn how to count from 1 to 10 and beyond",
-    "keywords": ["broj", "jedan", "dva", "tri", "četiri", "pet", "šest", "sedam", "osam", "devet", "deset"],
-    "vocabulary": ["broj", "jedan", "dva", "tri", "četiri", "pet", "šest", "sedam", "osam", "devet", "deset", "dvadeset", "sto", "tisuću"],
-    "min_words": 2,
-    "max_words": 5
-  },
-  {
-    "name": "Colors and Descriptions",
-    "image_resource": "R.drawable.colors",
-    "description": "Learn common colors and how to describe objects",
-    "keywords": ["boja", "crvena", "plava", "zelena", "žuta", "narančasta", "ljubičasta", "bijela", "crna", "siva"],
-    "vocabulary": ["boja", "crvena", "plava", "zelena", "žuta", "narančasta", "ljubičasta", "bijela", "crna", "siva", "svijetlo", "tamno", "lijepa", "ružna"],
-    "min_words": 2,
-    "max_words": 5
-  },
-  {
-    "name": "Family Members",
-    "image_resource": "R.drawable.family",
-    "description": "Learn names of family members and how to describe relationships",
-    "keywords": ["obitelj", "majka", "otac", "sina", "kći", "brat", "sestra", "djed", "baka", "sinovac", "nećakinja"],
-    "vocabulary": ["obitelj", "majka", "otac", "sina", "kći", "brat", "sestra", "djed", "baka", "sinovac", "nećakinja", "roditelji", "djeca", "baka i djed"],
-    "min_words": 2,
-    "max_words": 5
-  },
-  {
-    "name": "Food and Drinks",
-    "image_resource": "R.drawable.food",
-    "description": "Learn names of common foods and beverages",
-    "keywords": ["hrana", "piće", "kruh", "mlijeko", "voda", "meso", "riba", "voće", "povrće", "kava", "čaj"],
-    "vocabulary": ["hrana", "piće", "kruh", "mlijeko", "voda", "meso", "riba", "voće", "povrće", "kava", "čaj", "jaja", "sir", "pivo", "vino"],
-    "min_words": 2,
-    "max_words": 5
-  },
-  {
-    "name": "Days of the Week",
-    "image_resource": "R.drawable.days",
-    "description": "Learn names of the days of the week",
-    "keywords": ["dan", "ponedjeljak", "utorak", "srijeda", "četvrtak", "petak", "subota", "nedjelja"],
-    "vocabulary": ["dan", "ponedjeljak", "utorak", "srijeda", "četvrtak", "petak", "subota", "nedjelja", "vikend"],
-    "min_words": 2,
-    "max_words": 5
-  },
-  {
-    "name": "Weather and Seasons",
-    "image_resource": "R.drawable.weather",
-    "description": "Learn common weather conditions and names of the seasons",
-    "keywords": ["vrijeme", "sunčano", "oblačno", "kišovito", "vjetar", "snijeg", "ljeto", "jesen", "zima", "proljeće"],
-    "vocabulary": ["vrijeme", "sunčano", "oblačno", "kišovito", "vjetar", "snijeg", "ljeto", "jesen", "zima", "proljeće", "toplina", "hladnoća", "kiša", "snijeg", "grmljavina"],
-    "min_words": 2,
-    "max_words": 5
-  },
-  {
-    "name": "Transportation",
-    "image_resource": "R.drawable.transportation",
-    "description": "Learn names of common transportation vehicles",
-    "keywords": ["vozilo", "automobil", "autobus", "vlak", "tramvaj", "bicikl", "motor", "taksi", "avion", "brod"],
-    "vocabulary": ["vozilo", "automobil", "autobus", "vlak", "tramvaj", "bicikl", "motor", "taksi", "avion", "brod", "vozač", "putnik", "vožnja", "parking"],
-    "min_words": 2,
-    "max_words": 5
-  },
-  {
-    "name": "Common Phrases and Expressions",
-    "image_resource": "R.drawable.phrases",
-    "description": "Learn useful phrases and expressions for everyday situations",
-    "keywords": ["fraza", "izraz", "molim", "hvala", "oprosti", "kako se zoveš?", "gdje je?", "koliko košta?", "imam alergiju", "trebam pomoć"],
-    "vocabulary": ["fraza", "izraz", "molim", "hvala", "oprosti", "kako se zoveš?", "gdje je?", "koliko košta?", "imam alergiju", "trebam pomoć", "jutro", "večer", "laku noć", "sretan rođendan"],
-    "min_words": 2,
-    "max_words": 5
-  },
-  {
-    "name": "Hobbies and Leisure Activities",
-    "image_resource": "R.drawable.hobbies",
-    "description": "Learn names of hobbies and activities people enjoy in their free time",
-    "keywords": ["hobi", "sport", "čitanje", "pisanje", "ples", "glazba", "film", "putovanje", "kuhanje", "slikanje"],
-    "vocabulary": ["hobi", "sport", "čitanje", "pisanje", "ples", "glazba", "film", "putovanje", "kuhanje", "slikanje", "planinarenje", "ronjenje", "šetnja", "biciklizam"],
-    "min_words": 2,
-    "max_words": 5
-  },
-  {
-    "name": "Personal Pronouns",
-    "image_resource": "R.drawable.pronouns",
-    "description": "Learn the Croatian personal pronouns and their usage",
-    "keywords": ["ja", "ti", "on", "ona", "ono", "mi", "vi", "oni"],
-    "vocabulary": ["ja", "ti", "on", "ona", "ono", "mi", "vi", "oni", "sve", "svi", "svaka", "svaki", "svako"],
+    "id": 668,
+    "name": "How much is enough?",
+    "image_resource": "R.drawable.cat",
+    "description": "Learn to ask how much.",
+    "keywords": ["Koliko", "Kako"],
+    "vocabulary": ["koliko", "kako"],
+    "type": "translation",
     "min_words": 1,
-    "max_words": 1
-  },
-  {
-    "name": "Verb Conjugation",
-    "image_resource": "R.drawable.verbs",
-    "description": "Learn how to conjugate verbs in different tenses and persons",
-    "keywords": ["glagol", "imati", "biti", "raditi", "govoriti", "čitati", "pisati", "vidjeti", "živjeti", "voljeti"],
-    "vocabulary": ["imam", "imaš", "ima", "imamo", "imate", "imaju", "jesam", "jesi", "je", "smo", "ste", "su", "radim", "radiš", "radi", "radimo", "radite", "rade"],
-    "min_words": 1,
-    "max_words": 1
-  },
-  {
-    "name": "Present Tense",
-    "image_resource": "R.drawable.present_tense",
-    "description": "Learn how to conjugate verbs in the present tense",
-    "keywords": ["sada", "trenutno", "učim", "čitam", "pišem", "trčim", "volim", "putujem", "kuham", "gledam"],
-    "vocabulary": ["učim", "čitam", "pišem", "trčim", "volim", "putujem", "kuham", "gledam", "slušam", "govorim", "razmišljam", "spavam"],
-    "min_words": 1,
-    "max_words": 1
-  },
-  {
-    "name": "Past Tense",
-    "image_resource": "R.drawable.past_tense",
-    "description": "Learn how to conjugate verbs in the past tense",
-    "keywords": ["jučer", "prošli", "prije", "jutros", "danas", "ovaj", "onaj", "zadnji", "prošli", "prije"],
-    "vocabulary": ["radio", "radila", "radio", "radila", "radili", "radile", "vidio", "vidjela", "vidjeli", "vidjele", "putovao", "putovala", "putovali", "putovale"],
-    "min_words": 1,
-    "max_words": 1
-  },
-  {
-    "name": "Future Tense",
-    "image_resource": "R.drawable.future_tense",
-    "description": "Learn how to conjugate verbs in the future tense",
-    "keywords": ["sutra", "budući", "uskoro", "možda", "vjerojatno", "sigurno", "nadam se"],
-    "vocabulary": ["ću", "ćeš", "će", "ćemo", "ćete", "će", "radit ću", "radit ćeš", "radit će", "radit ćemo", "radit ćete", "radit će"],
-    "min_words": 1,
-    "max_words": 1
-  },
-  {
-    "name": "Negation",
-    "image_resource": "R.drawable.negation",
-    "description": "Learn how to make negative sentences in Croatian",
-    "keywords": ["ne", "nikad", "nijedan", "niko", "ništa", "nitko", "ništa"],
-    "vocabulary": ["ne", "neću", "nećeš", "neće", "nećemo", "nećete", "neće", "nema", "nemam", "nemaš", "nema", "nemamo", "nemate", "nemaju"],
-    "min_words": 1,
-    "max_words": 1
-  },
-  {
-    "name": "Possessive Pronouns",
-    "image_resource": "R.drawable.possessive_pronouns",
-    "description": "Learn how to express possession using possessive pronouns",
-    "keywords": ["moj", "tvoj", "njegov", "njezin", "njihov", "naš", "vaš", "svoj"],
-    "vocabulary": ["moj", "tvoj", "njegov", "njezin", "njihov", "naš", "vaš", "svoj", "moji", "tvoji", "njegovi", "njezini", "njihovi", "naši", "vaši", "svoji"],
-    "min_words": 1,
-    "max_words": 1
-  },
-  {
-    "name": "Reflexive Pronouns",
-    "image_resource": "R.drawable.reflexive_pronouns",
-    "description": "Learn how to use reflexive pronouns for actions done to oneself",
-    "keywords": ["sebe", "sami", "sve", "svi", "svaki", "svaka", "svako", "njih"],
-    "vocabulary": ["sebe", "sami", "sve", "svi", "svaki", "svaka", "svako", "njih", "se", "sebi", "sebe", "sebi", "sebe", "sebi", "sebe", "sebi"],
-    "min_words": 1,
-    "max_words": 1
-  },
-  {
-    "name": "Interrogative Pronouns",
-    "image_resource": "R.drawable.interrogative_pronouns",
-    "description": "Learn how to form questions using interrogative pronouns",
-    "keywords": ["tko", "što", "kada", "gdje", "kako", "zašto", "koliko"],
-    "vocabulary": ["tko", "što", "kada", "gdje", "kako", "zašto", "koliko", "koji", "koja", "koje", "koliki", "kolika", "koliko", "kojeg", "koje", "kojeg"],
-    "min_words": 1,
-    "max_words": 1
-  },
-  {
-    "name": "Demonstrative Pronouns",
-    "image_resource": "R.drawable.demonstrative_pronouns",
-    "description": "Learn how to use demonstrative pronouns to indicate objects",
-    "keywords": ["ovaj", "onaj", "taj", "svaki", "svašta", "sve", "svi", "svaki", "svaka", "svako"],
-    "vocabulary": ["ovaj", "onaj", "taj", "svaki", "svašta", "sve", "svi", "svaki", "svaka", "svako", "ovdje", "onde", "tamo", "gore", "dolje", "lijevo"],
-    "min_words": 1,
-    "max_words": 1
+    "max_words": 5,
+    "template": "^(koliko|kako).+\\?$\n",
+    "depends_on": []
   }
 ]
