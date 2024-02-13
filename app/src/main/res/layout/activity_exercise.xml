@@ -47,6 +47,12 @@
         android:textColor="@android:color/black"
         android:layout_marginTop="16dp"/>
 
+    <!-- Spacer View to Push Buttons to the Bottom -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
     <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/wordButtonsLayout"
         android:layout_width="match_parent"
@@ -58,41 +64,38 @@
         android:layout_marginTop="16dp">
     </com.google.android.flexbox.FlexboxLayout>
 
-    <!-- Submit Button -->
-    <Button
-        android:id="@+id/buttonSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/wordButtonsLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="Submit" />
+    <!-- Spacer View to Push Buttons to the Bottom -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-    <!-- Skip Button -->
-    <Button
-        android:id="@+id/buttonSkip"
-        android:layout_width="wrap_content"
+    <!-- Skip and Submit Buttons Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonSubmit"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="Skip" />
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Skip Button -->
+        <Button
+            android:id="@+id/buttonSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonSubmit"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="24dp"
+            android:text="Skip" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wordButtonsLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="24dp"
+            android:text="Submit" />
+    </LinearLayout>
+
 </LinearLayout>
-
-
-    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-    <TextView
-        android:id="@+id/textPrompt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Prompt"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/textSentence"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sentence"
-        android:textSize="24sp" />
-    -->
