@@ -40,6 +40,7 @@ class ExerciseActivity : AppCompatActivity() {
         val vocabularyArray = intent.getStringArrayExtra("vocabulary") ?: arrayOf()
         vocabulary = ArrayList<String>(vocabularyArray.toList())
         val maxWords = intent.getIntExtra("maxWords", 0)
+        val template = intent.getStringExtra("template") ?: ".*"
 
         // Read JSON file
         val json = resources.openRawResource(R.raw.exercises).bufferedReader().use { it.readText() }
@@ -49,11 +50,14 @@ class ExerciseActivity : AppCompatActivity() {
         val filteredExercises = (0 until exercises.length())
             .map { exercises.getJSONObject(it) }
             .filter { exercise ->
-                val answer = exercise.getString("Croatian").replace("[^\\p{L}\\s']".toRegex(), "")
-                val answerWords = answer.split(" ").map { it.trim() }
+                val answer = exercise.getString("Croatian")
+                val answerWords = answer
+                    .replace("[^\\p{L}\\s']".toRegex(), "")
+                    .split(" ").map { it.trim() }
                 val containsLessonWords = answerWords.any { word -> keywords.contains(word) }
                 val withinMaxWordLimit = answerWords.size <= maxWords
-                containsLessonWords && withinMaxWordLimit
+                val matchesTemplate = template.toRegex().matches(answer)
+                containsLessonWords && withinMaxWordLimit && matchesTemplate
             }
 
         // Shuffle the filteredExercises and take the first 15 exercises

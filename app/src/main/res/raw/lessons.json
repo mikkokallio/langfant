@@ -3,11 +3,12 @@
     "id": 101,
     "name": "Cats and dogs!",
     "image_resource": "R.drawable.cat",
-    "description": "Learn some basic words and form simple sentences",
+    "description": "Learn some of the most common nouns.",
     "type": "word-match",
     "keywords": [],
-    "vocabulary": {"mačka": "cat", "pas": "dog", "auto": "car", "bicikl": "bike", "kuća": "house", "škola": "school", "stol": "table", "stolica": "chair", "knjiga": "book", "telefon": "phone", "čovjek": "man", "žena": "woman", "hrana": "food", "voda": "water", "voće": "fruit", "cvijet": "flower", "ulica": "street", "grad": "city"},
+    "vocabulary": ["mačka", "pas", "auto", "bicikl", "kuća", "škola", "stol", "stolica", "knjiga", "telefon", "čovjek", "žena", "hrana", "voda", "voće", "cvijet", "ulica", "grad"],
     "max_words": 3,
+    "template": "",
     "depends_on": []
   },
   {
@@ -17,8 +18,9 @@
     "description": "Learn some basic words and form simple sentences",
     "keywords": ["je"],
     "type": "translation",
-    "vocabulary": {"je": "is"},
+    "vocabulary": ["je"],
     "max_words": 3,
+    "template": "^.*\\sje\\s.*\\.$",
     "depends_on": []
   },
   {
@@ -27,9 +29,10 @@
     "image_resource": "R.drawable.cat",
     "description": "Learn the word 'što'.",
     "keywords": ["što"],
-    "vocabulary": {"što": "what"},
+    "vocabulary": ["što"],
     "type": "translation",
     "max_words": 3,
+    "template": "^što.+\\?$\n",
     "depends_on": []
   },
   {
@@ -40,7 +43,6 @@
     "keywords": ["Koliko", "Kako"],
     "vocabulary": ["koliko", "kako"],
     "type": "translation",
-    "min_words": 1,
     "max_words": 5,
     "template": "^(koliko|kako).+\\?$\n",
     "depends_on": []

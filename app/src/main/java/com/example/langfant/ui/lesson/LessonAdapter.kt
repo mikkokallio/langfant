@@ -55,11 +55,11 @@ class LessonAdapter(private val lessons: List<Lesson>) :
             // Start ExerciseActivity and pass lesson words as extras
             val intent = Intent(holder.itemView.context, ExerciseActivity::class.java)
             val keywordsArray = lessons[position].keywords.toTypedArray()
-            val vocabularyObject = lessons[position].vocabulary
-            val vocabularyArray = vocabularyObject.entries.map { it.key }.toTypedArray()
+            val vocabularyArray = lessons[position].keywords.toTypedArray()
             intent.putExtra("keywords", keywordsArray)
             intent.putExtra("vocabulary", vocabularyArray)
             intent.putExtra("maxWords", lessons[position].maxWords)
+            intent.putExtra("template", lessons[position].template)
             holder.itemView.context.startActivity(intent)
         }
     }
