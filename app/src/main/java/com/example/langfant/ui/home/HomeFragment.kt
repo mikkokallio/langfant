@@ -53,12 +53,11 @@ class HomeFragment : Fragment() {
                 val name = lessonJson.getString("name")
                 //val imageResource = lessonJson.getInt("image_resource")
                 val description = lessonJson.getString("description")
-                val keywords = parseJsonArray(lessonJson.getJSONArray("keywords"))
                 val vocabulary = parseJsonArray(lessonJson.getJSONArray("vocabulary"))
                 val template = lessonJson.getString("template")
                 val maxWords = lessonJson.getInt("max_words")
 
-                val lesson = Lesson(name, R.drawable.cat, description, "word-match", keywords, vocabulary, template, maxWords)
+                val lesson = Lesson(name, R.drawable.cat, description, "word-match", vocabulary, template, maxWords)
                 lessons.add(lesson)
             }
         } catch (e: Exception) {

@@ -54,10 +54,9 @@ class ExerciseActivity : AppCompatActivity() {
                 val answerWords = answer
                     .replace("[^\\p{L}\\s']".toRegex(), "")
                     .split(" ").map { it.trim() }
-                val containsLessonWords = answerWords.any { word -> keywords.contains(word) }
                 val withinMaxWordLimit = answerWords.size <= maxWords
                 val matchesTemplate = template.toRegex().matches(answer)
-                containsLessonWords && withinMaxWordLimit && matchesTemplate
+                withinMaxWordLimit && matchesTemplate
             }
 
         // Shuffle the filteredExercises and take the first 15 exercises

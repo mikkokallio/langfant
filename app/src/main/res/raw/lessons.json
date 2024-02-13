@@ -5,7 +5,6 @@
     "image_resource": "R.drawable.cat",
     "description": "Learn some of the most common nouns.",
     "type": "word-match",
-    "keywords": [],
     "vocabulary": ["mačka", "pas", "auto", "bicikl", "kuća", "škola", "stol", "stolica", "knjiga", "telefon", "čovjek", "žena", "hrana", "voda", "voće", "cvijet", "ulica", "grad"],
     "max_words": 3,
     "template": "",
@@ -16,7 +15,6 @@
     "name": "The cat is black",
     "image_resource": "R.drawable.cat",
     "description": "Learn some basic words and form simple sentences",
-    "keywords": ["je"],
     "type": "translation",
     "vocabulary": ["je"],
     "max_words": 3,
@@ -28,11 +26,10 @@
     "name": "What???",
     "image_resource": "R.drawable.cat",
     "description": "Learn the word 'što'.",
-    "keywords": ["što"],
     "vocabulary": ["što"],
     "type": "translation",
     "max_words": 3,
-    "template": "^što.+\\?$\n",
+    "template": "^što.+\\?$",
     "depends_on": []
   },
   {
@@ -40,11 +37,10 @@
     "name": "How much is enough?",
     "image_resource": "R.drawable.cat",
     "description": "Learn to ask how much.",
-    "keywords": ["Koliko", "Kako"],
     "vocabulary": ["koliko", "kako"],
     "type": "translation",
     "max_words": 5,
-    "template": "^(koliko|kako).+\\?$\n",
+    "template": "^(Koliko|Kako).+\\?$",
     "depends_on": []
   }
 ]

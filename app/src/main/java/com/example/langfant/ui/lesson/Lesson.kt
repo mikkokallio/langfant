@@ -5,7 +5,6 @@ data class Lesson(
     val imageResource: Int,
     val description: String,
     val type: String,
-    val keywords: List<String>,
     val vocabulary: List<String>,
     val template: String,
     val maxWords: Int

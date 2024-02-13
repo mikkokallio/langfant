@@ -19,8 +19,6 @@ class LessonAdapter(private val lessons: List<Lesson>) :
     inner class LessonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val lessonName: TextView = itemView.findViewById(R.id.lessonName)
         val lessonImage: ImageView = itemView.findViewById(R.id.lessonImage)
-        //val lessonRepetitions: TextView = itemView.findViewById(R.id.lessonRepetitions)
-        //val lessonWords: TextView = itemView.findViewById(R.id.lessonWords)
         val lessonDescription: TextView = itemView.findViewById(R.id.lessonDescription)
         val startButton: Button = itemView.findViewById(R.id.startButton)
     }
@@ -54,9 +52,7 @@ class LessonAdapter(private val lessons: List<Lesson>) :
         holder.startButton.setOnClickListener {
             // Start ExerciseActivity and pass lesson words as extras
             val intent = Intent(holder.itemView.context, ExerciseActivity::class.java)
-            val keywordsArray = lessons[position].keywords.toTypedArray()
-            val vocabularyArray = lessons[position].keywords.toTypedArray()
-            intent.putExtra("keywords", keywordsArray)
+            val vocabularyArray = lessons[position].vocabulary.toTypedArray()
             intent.putExtra("vocabulary", vocabularyArray)
             intent.putExtra("maxWords", lessons[position].maxWords)
             intent.putExtra("template", lessons[position].template)
