@@ -22,13 +22,24 @@
     "depends_on": []
   },
   {
-    "id": 666,
+    "id": 250,
     "name": "The cat is black",
     "image_resource": "R.drawable.cat",
     "description": "Learn some basic words and form simple sentences",
     "type": "translation",
     "vocabulary": ["je"],
     "max_words": 3,
+    "template": "^.*\\sje\\s.*\\.$",
+    "depends_on": []
+  },
+  {
+    "id": 300,
+    "name": "Is that so?",
+    "image_resource": "R.drawable.cat",
+    "description": "Learn to form questions with 'li'.",
+    "type": "translation",
+    "vocabulary": ["li"],
+    "max_words": 4,
     "template": "^.*\\sje\\s.*\\.$",
     "depends_on": []
   },

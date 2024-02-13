@@ -1,0 +1,74 @@
+[
+  {
+    "English": "cat",
+    "Croatian": "mačka"
+  },
+  {
+    "English": "dog",
+    "Croatian": "pas"
+  },
+  {
+    "English": "car",
+    "Croatian": "auto"
+  },
+  {
+    "English": "bike",
+    "Croatian": "bicikl"
+  },
+  {
+    "English": "house",
+    "Croatian": "kuća"
+  },
+  {
+    "English": "school",
+    "Croatian": "škola"
+  },
+  {
+    "English": "table",
+    "Croatian": "stol"
+  },
+  {
+    "English": "chair",
+    "Croatian": "stolica"
+  },
+  {
+    "English": "book",
+    "Croatian": "knjiga"
+  },
+  {
+    "English": "phone",
+    "Croatian": "telefon"
+  },
+  {
+    "English": "man",
+    "Croatian": "čovjek"
+  },
+  {
+    "English": "woman",
+    "Croatian": "žena"
+  },
+  {
+    "English": "food",
+    "Croatian": "hrana"
+  },
+  {
+    "English": "water",
+    "Croatian": "voda"
+  },
+  {
+    "English": "fruit",
+    "Croatian": "voće"
+  },
+  {
+    "English": "flower",
+    "Croatian": "cvijet"
+  },
+  {
+    "English": "street",
+    "Croatian": "ulica"
+  },
+  {
+    "English": "city",
+    "Croatian": "grad"
+  }
+]
