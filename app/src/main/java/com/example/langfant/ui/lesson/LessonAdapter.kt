@@ -59,6 +59,7 @@ class LessonAdapter(private val lessons: List<Lesson>) :
             val vocabularyArray = vocabularyObject.entries.map { it.key }.toTypedArray()
             intent.putExtra("keywords", keywordsArray)
             intent.putExtra("vocabulary", vocabularyArray)
+            intent.putExtra("maxWords", lessons[position].maxWords)
             holder.itemView.context.startActivity(intent)
         }
     }
