@@ -26,7 +26,13 @@
         android:text="Translate the following sentence:"
         android:textSize="18sp" />
 
-    <include layout="@layout/translation_layout"/>
+    <!-- Specific elements for translation exercises -->
+    <include layout="@layout/translation_layout" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <!-- Specific elements for word match exercises -->
+    <include layout="@layout/word_match_layout" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
     <!-- Spacer View to Push Buttons to the Bottom -->
     <View
@@ -46,8 +52,6 @@
             android:id="@+id/buttonSkip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/buttonSubmit"
-            android:layout_centerHorizontal="true"
             android:layout_margin="24dp"
             android:text="Skip" />
 
@@ -56,8 +60,6 @@
             android:id="@+id/buttonSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/wordButtonsLayout"
-            android:layout_centerHorizontal="true"
             android:layout_margin="24dp"
             android:text="Submit" />
     </LinearLayout>

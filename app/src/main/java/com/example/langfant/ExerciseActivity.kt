@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Html
+import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.EditText
@@ -41,6 +42,20 @@ class ExerciseActivity : AppCompatActivity() {
         vocabulary = ArrayList<String>(vocabularyArray.toList())
         val maxWords = intent.getIntExtra("maxWords", 0)
         val template = intent.getStringExtra("template") ?: ".*"
+        val type = intent.getStringExtra("type")
+
+        println(type)
+
+        // Hide all exercise specific elements
+        findViewById<View>(R.id.translation_content).visibility = View.VISIBLE
+        findViewById<View>(R.id.wordmatch_content).visibility = View.GONE
+
+        // Load the appropriate layout based on the lesson's type
+        if (type == "translation") {
+            findViewById<View>(R.id.translation_content).visibility = View.VISIBLE
+        } else if (type == "word-match") {
+            findViewById<View>(R.id.wordmatch_content).visibility = View.VISIBLE
+        }
 
         // Read JSON file
         val json = resources.openRawResource(R.raw.exercises).bufferedReader().use { it.readText() }

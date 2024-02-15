@@ -56,6 +56,7 @@ class LessonAdapter(private val lessons: List<Lesson>) :
             intent.putExtra("vocabulary", vocabularyArray)
             intent.putExtra("maxWords", lessons[position].maxWords)
             intent.putExtra("template", lessons[position].template)
+            intent.putExtra("type", lessons[position].type)
             holder.itemView.context.startActivity(intent)
         }
     }
