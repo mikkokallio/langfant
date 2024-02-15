@@ -2013,5 +2013,29 @@
     "English": "My hovercraft is full of eels",
     "Croatian": "Moja je lebdjelica puna jegulja",
     "Source": "Omniglot"
-  }
-]
+  },
+    {"English": "I have an apple", "Croatian": "Ja imam jabuku", "source": "ChatGPT"},
+    {"English": "I am drinking water", "Croatian": "Pijem vodu", "source": "ChatGPT"},
+    {"English": "I like to run", "Croatian": "Volim trčati", "source": "ChatGPT"},
+    {"English": "I am going home", "Croatian": "Idem kući", "source": "ChatGPT"},
+    {"English": "I am going to school", "Croatian": "Idem u školu", "source": "ChatGPT"},
+    {"English": "I am reading a book", "Croatian": "Čitam knjigu", "source": "ChatGPT"},
+    {"English": "I have a phone", "Croatian": "Imam telefon", "source": "ChatGPT"},
+    {"English": "I am a man", "Croatian": "Ja sam čovjek", "source": "ChatGPT"},
+    {"English": "I am a woman", "Croatian": "Ja sam žena", "source": "ChatGPT"},
+    {"English": "I am hungry", "Croatian": "Ja sam gladan", "source": "ChatGPT"},
+    {"English": "I am eating fruit", "Croatian": "Ja jedem voće", "source": "ChatGPT"},
+    {"English": "I have a flower", "Croatian": "Imam cvijet", "source": "ChatGPT"},
+    {"English": "I am going to the street", "Croatian": "Idem na ulicu", "source": "ChatGPT"},
+    {"English": "I am going to the city", "Croatian": "Idem u grad", "source": "ChatGPT"},
+    {"English": "I am walking on the street", "Croatian": "Hodam po ulici", "source": "ChatGPT"},
+    {"English": "I am running in the city", "Croatian": "Trčim u gradu", "source": "ChatGPT"},
+    {"English": "I am riding a bicycle", "Croatian": "Vožnja biciklom", "source": "ChatGPT"},
+    {"English": "I am in a house", "Croatian": "Ja sam u kući", "source": "ChatGPT"},
+    {"English": "I am in a school", "Croatian": "Ja sam u školi", "source": "ChatGPT"},
+    {"English": "I am on a table", "Croatian": "Ja sam na stolu", "source": "ChatGPT"},
+    {"English": "I am on a chair", "Croatian": "Ja sam na stolici", "source": "ChatGPT"},
+    {"English": "I am on a street", "Croatian": "Ja sam na ulici", "source": "ChatGPT"},
+    {"English": "I am walking on a street", "Croatian": "Ja hodam po ulici", "source": "ChatGPT"},
+    {"English": "I am eating food", "Croatian": "Ja jedem hranu", "source": "ChatGPT"}
+  ]

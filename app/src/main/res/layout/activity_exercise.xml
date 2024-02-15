@@ -26,43 +26,7 @@
         android:text="Translate the following sentence:"
         android:textSize="18sp" />
 
-    <!-- Sentence TextView -->
-    <TextView
-        android:id="@+id/textSentence"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textPrompt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="Oops! You shouldn't be seeing this."
-        android:textSize="24sp" />
-
-    <!-- Selected Words TextView -->
-    <TextView
-        android:id="@+id/selectedWordsTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="16dp"/>
-
-    <!-- Spacer View to Push Buttons to the Bottom -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <com.google.android.flexbox.FlexboxLayout
-        android:id="@+id/wordButtonsLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:flexWrap="wrap"
-        app:justifyContent="flex_start"
-        app:alignItems="flex_start"
-        android:layout_marginTop="16dp">
-    </com.google.android.flexbox.FlexboxLayout>
+    <include layout="@layout/translation_layout"/>
 
     <!-- Spacer View to Push Buttons to the Bottom -->
     <View

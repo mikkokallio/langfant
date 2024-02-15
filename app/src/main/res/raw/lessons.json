@@ -22,6 +22,17 @@
     "depends_on": []
   },
   {
+    "id": 151,
+    "name": "And and or",
+    "image_resource": "R.drawable.cat",
+    "description": "Learn the conjunctions and and or.",
+    "type": "translation",
+    "vocabulary": ["i", "ti", "ona", "on", "ovo", "to"],
+    "max_words": 1,
+    "template": "",
+    "depends_on": []
+  },
+  {
     "id": 250,
     "name": "The cat is black",
     "image_resource": "R.drawable.cat",
