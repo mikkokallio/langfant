@@ -27,7 +27,6 @@ class ExerciseActivity : AppCompatActivity() {
     private var selectedWords = mutableListOf<String>()
     private var englishToCroatian = true
     private lateinit var progressBar: ProgressBar
-    private lateinit var keywords: MutableList<String>
     private lateinit var vocabulary: MutableList<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,8 +37,6 @@ class ExerciseActivity : AppCompatActivity() {
         progressBar = findViewById<ProgressBar>(R.id.progressBar)
 
         // Retrieve extras from intent
-        val keywordsArray = intent.getStringArrayExtra("keywords") ?: arrayOf()
-        keywords = ArrayList<String>(keywordsArray.toList())
         val vocabularyArray = intent.getStringArrayExtra("vocabulary") ?: arrayOf()
         vocabulary = ArrayList<String>(vocabularyArray.toList())
         val maxWords = intent.getIntExtra("maxWords", 0)
