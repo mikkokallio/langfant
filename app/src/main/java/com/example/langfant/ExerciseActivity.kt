@@ -16,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.langfant.R
 import com.google.android.flexbox.FlexboxLayout
 import org.json.JSONArray
+import org.json.JSONObject
+
 import java.io.InputStream
 
 class ExerciseActivity : AppCompatActivity() {
@@ -44,8 +46,6 @@ class ExerciseActivity : AppCompatActivity() {
         val template = intent.getStringExtra("template") ?: ".*"
         val type = intent.getStringExtra("type")
 
-        println(type)
-
         // Hide all exercise specific elements
         findViewById<View>(R.id.translation_content).visibility = View.VISIBLE
         findViewById<View>(R.id.wordmatch_content).visibility = View.GONE
@@ -62,17 +62,7 @@ class ExerciseActivity : AppCompatActivity() {
         exercises = JSONArray(json)
 
         // Filter exercises based constraints
-        val filteredExercises = (0 until exercises.length())
-            .map { exercises.getJSONObject(it) }
-            .filter { exercise ->
-                val answer = exercise.getString("Croatian")
-                val answerWords = answer
-                    .replace("[^\\p{L}\\s']".toRegex(), "")
-                    .split(" ").map { it.trim() }
-                val withinMaxWordLimit = answerWords.size <= maxWords
-                val matchesTemplate = template.toRegex().matches(answer)
-                withinMaxWordLimit && matchesTemplate
-            }
+        val filteredExercises = filterExercises(exercises, maxWords, template)
 
         // Shuffle the filteredExercises and take the first 15 exercises
         val shuffledExercises = filteredExercises.shuffled()
@@ -100,6 +90,20 @@ class ExerciseActivity : AppCompatActivity() {
             englishToCroatian = !englishToCroatian
             displayExercise(currentIndex)
         }
+    }
+
+    private fun filterExercises(exercises: JSONArray, maxWords: Int, template: String): List<JSONObject> {
+        return (0 until exercises.length())
+            .map { exercises.getJSONObject(it) }
+            .filter { exercise ->
+                val answer = exercise.getString("Croatian")
+                val answerWords = answer
+                    .replace("[^\\p{L}\\s']".toRegex(), "")
+                    .split(" ").map { it.trim() }
+                val withinMaxWordLimit = answerWords.size <= maxWords
+                val matchesTemplate = template.toRegex().matches(answer)
+                withinMaxWordLimit && matchesTemplate
+            }
     }
 
     private fun displayExercise(index: Int) {
