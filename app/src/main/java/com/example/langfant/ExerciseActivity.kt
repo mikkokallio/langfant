@@ -222,6 +222,8 @@ class WordMatchExercise : ExerciseActivity() {
     override fun getExercises(maxWords: Int, template: String, vocabularyList: ArrayList<String>): JSONArray {
         val json = resources.openRawResource(R.raw.vocabulary).bufferedReader().use { it.readText() }
         val vocabulary = JSONArray(json)
+        println(vocabulary)
+        println(vocabularyList)
 
         // Filter vocabulary array to include only words in the vocabulary list
         val filteredVocabulary = JSONArray()
@@ -273,7 +275,7 @@ class WordMatchExercise : ExerciseActivity() {
             for (i in 0 until translationsArray.length()) {
                 translations.add(translationsArray.getString(i))
             }
-            val layout: GridLayout = findViewById(R.id.wordButtonsLayout)
+            val layout: GridLayout = findViewById(R.id.wordMatchLayout)
             layout.removeAllViews()
 
             for (i in words.indices) {

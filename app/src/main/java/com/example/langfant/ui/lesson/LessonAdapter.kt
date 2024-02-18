@@ -11,6 +11,7 @@ import com.example.langfant.R
 import android.widget.Button
 import com.example.langfant.ExerciseActivity
 import com.example.langfant.TranslationExercise
+import com.example.langfant.WordMatchExercise
 
 class LessonAdapter(private val lessons: List<Lesson>) :
     RecyclerView.Adapter<LessonAdapter.LessonViewHolder>() {
@@ -52,7 +53,13 @@ class LessonAdapter(private val lessons: List<Lesson>) :
         }
         holder.startButton.setOnClickListener {
             // Start ExerciseActivity and pass lesson words as extras
-            val intent = Intent(holder.itemView.context, TranslationExercise::class.java)
+            val intent: Intent
+            if (lessons[position].type == "translation") {
+                intent = Intent(holder.itemView.context, TranslationExercise::class.java)
+            } else {
+                intent = Intent(holder.itemView.context, WordMatchExercise::class.java)
+            }
+
             val vocabularyArray = lessons[position].vocabulary.toTypedArray()
             intent.putExtra("vocabulary", vocabularyArray)
             intent.putExtra("maxWords", lessons[position].maxWords)
