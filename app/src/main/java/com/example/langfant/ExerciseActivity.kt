@@ -8,6 +8,7 @@ import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.GridLayout
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -52,7 +53,7 @@ abstract class ExerciseActivity : AppCompatActivity() {
             findViewById<View>(R.id.wordmatch_content).visibility = View.VISIBLE
         }
 
-        exercises = getExercises(maxWords, template)
+        exercises = getExercises(maxWords, template, vocabulary as ArrayList<String>)
 
         progressBar.max = exercises.length()
         progressBar.progress = 0
@@ -67,7 +68,7 @@ abstract class ExerciseActivity : AppCompatActivity() {
     }
 
     abstract fun setOnClickSubmit(submitButton: Button)
-    abstract fun getExercises(maxWords: Int, template: String): JSONArray
+    abstract fun getExercises(maxWords: Int, template: String, vocabularyList: ArrayList<String>): JSONArray
     abstract fun displayExercise(index: Int)
 }
 
@@ -87,7 +88,7 @@ class TranslationExercise : ExerciseActivity() {
             displayExercise(currentIndex)
         }
     }
-    override fun getExercises(maxWords: Int, template: String): JSONArray {
+    override fun getExercises(maxWords: Int, template: String, vocabularyList: ArrayList<String>): JSONArray {
         // Read JSON file
         val json = resources.openRawResource(R.raw.exercises).bufferedReader().use { it.readText() }
         exercises = JSONArray(json)
@@ -201,6 +202,104 @@ class TranslationExercise : ExerciseActivity() {
         } else {
             // Sentences don't match, handle incorrect answer
             Toast.makeText(this, Html.fromHtml("<big>Incorrect. The correct answer is:<br/>$answer</big>"), Toast.LENGTH_LONG).show()
+        }
+    }
+}
+
+class WordMatchExercise : ExerciseActivity() {
+    override fun setOnClickSubmit(submitButton: Button) {
+        // Set OnClickListener for the submit button
+        submitButton.setOnClickListener {
+            // Handle button click here
+            // For now, let's just display the next exercise
+            //checkAnswer()
+            currentIndex++
+            progressBar.progress = currentIndex
+            displayExercise(currentIndex)
+        }
+    }
+
+    override fun getExercises(maxWords: Int, template: String, vocabularyList: ArrayList<String>): JSONArray {
+        val json = resources.openRawResource(R.raw.vocabulary).bufferedReader().use { it.readText() }
+        val vocabulary = JSONArray(json)
+
+        // Filter vocabulary array to include only words in the vocabulary list
+        val filteredVocabulary = JSONArray()
+        for (i in 0 until vocabulary.length()) {
+            val word = vocabulary.getJSONObject(i).getString("Croatian")
+            if (vocabularyList.contains(word)) {
+                filteredVocabulary.put(vocabulary.getJSONObject(i))
+            }
+        }
+
+        val exercises = JSONArray()
+
+        for (i in 1..5) {
+            val exercise = JSONObject()
+
+            val words = mutableListOf<String>()
+            val translations = mutableListOf<String>()
+
+            // Select 5 random pairs of words and translations
+            for (j in 1..5) {
+                val index = (0 until filteredVocabulary.length()).random()
+                val word = filteredVocabulary.getJSONObject(index).getString("Croatian")
+                val translation = filteredVocabulary.getJSONObject(index).getString("English")
+
+                words.add(word)
+                translations.add(translation)
+            }
+
+            exercise.put("words", JSONArray(words))
+            exercise.put("translations", JSONArray(translations))
+
+            exercises.put(exercise)
+        }
+
+        return exercises
+    }
+
+    override fun displayExercise(index: Int) {
+        if (index < exercises.length()) {
+            val exercise = exercises.getJSONObject(index)
+            val wordsArray = exercise.getJSONArray("words")
+            val translationsArray = exercise.getJSONArray("translations")
+
+            val words = mutableListOf<String>()
+            for (i in 0 until wordsArray.length()) {
+                words.add(wordsArray.getString(i))
+            }
+            val translations = mutableListOf<String>()
+            for (i in 0 until translationsArray.length()) {
+                translations.add(translationsArray.getString(i))
+            }
+            val layout: GridLayout = findViewById(R.id.wordButtonsLayout)
+            layout.removeAllViews()
+
+            for (i in words.indices) {
+                val buttonCroatian = Button(this)
+                buttonCroatian.text = words[i]
+                buttonCroatian.setOnClickListener {
+                    //toggleWordSelection(buttonCroatian, words[i])
+                    //updateSelectedWordsTextView()
+                }
+                layout.addView(buttonCroatian)
+
+                val buttonEnglish = Button(this)
+                buttonEnglish.text = translations[i]
+                buttonEnglish.setOnClickListener {
+                    //toggleWordSelection(buttonEnglish, translations[i])
+                    //updateSelectedWordsTextView()
+                }
+                layout.addView(buttonEnglish)
+            }
+        } else {
+            // No more exercises, handle end of exercises
+            Toast.makeText(this, "No more exercises", Toast.LENGTH_SHORT).show()
+
+            // Navigate back to the lessons view
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 
