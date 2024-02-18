@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ExerciseActivity" />
+        <activity android:name=".TranslationExercise" />
     </application>
 
 </manifest>

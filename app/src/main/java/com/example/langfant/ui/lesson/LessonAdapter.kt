@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.langfant.R
 import android.widget.Button
 import com.example.langfant.ExerciseActivity
+import com.example.langfant.TranslationExercise
 
 class LessonAdapter(private val lessons: List<Lesson>) :
     RecyclerView.Adapter<LessonAdapter.LessonViewHolder>() {
@@ -51,7 +52,7 @@ class LessonAdapter(private val lessons: List<Lesson>) :
         }
         holder.startButton.setOnClickListener {
             // Start ExerciseActivity and pass lesson words as extras
-            val intent = Intent(holder.itemView.context, ExerciseActivity::class.java)
+            val intent = Intent(holder.itemView.context, TranslationExercise::class.java)
             val vocabularyArray = lessons[position].vocabulary.toTypedArray()
             intent.putExtra("vocabulary", vocabularyArray)
             intent.putExtra("maxWords", lessons[position].maxWords)

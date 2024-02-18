@@ -20,7 +20,7 @@ import org.json.JSONObject
 
 import java.io.InputStream
 
-class ExerciseActivity : AppCompatActivity() {
+abstract class ExerciseActivity : AppCompatActivity() {
     private lateinit var exercises: JSONArray
     //private lateinit var lessonWords: List<String>
     private var currentIndex = 0
@@ -87,20 +87,6 @@ class ExerciseActivity : AppCompatActivity() {
             englishToCroatian = !englishToCroatian
             displayExercise(currentIndex)
         }
-    }
-
-    private fun filterExercises(exercises: JSONArray, maxWords: Int, template: String): List<JSONObject> {
-        return (0 until exercises.length())
-            .map { exercises.getJSONObject(it) }
-            .filter { exercise ->
-                val answer = exercise.getString("Croatian")
-                val answerWords = answer
-                    .replace("[^\\p{L}\\s']".toRegex(), "")
-                    .split(" ").map { it.trim() }
-                val withinMaxWordLimit = answerWords.size <= maxWords
-                val matchesTemplate = template.toRegex().matches(answer)
-                withinMaxWordLimit && matchesTemplate
-            }
     }
 
     private fun displayExercise(index: Int) {
@@ -191,4 +177,24 @@ class ExerciseActivity : AppCompatActivity() {
             Toast.makeText(this, Html.fromHtml("<big>Incorrect. The correct answer is:<br/>$answer</big>"), Toast.LENGTH_LONG).show()
         }
     }
+
+    abstract fun filterExercises(exercises: JSONArray, maxWords: Int, template: String): List<JSONObject>
+}
+
+class TranslationExercise : ExerciseActivity() {
+
+    override fun filterExercises(exercises: JSONArray, maxWords: Int, template: String): List<JSONObject> {
+        return (0 until exercises.length())
+            .map { exercises.getJSONObject(it) }
+            .filter { exercise ->
+                val answer = exercise.getString("Croatian")
+                val answerWords = answer
+                    .replace("[^\\p{L}\\s']".toRegex(), "")
+                    .split(" ").map { it.trim() }
+                val withinMaxWordLimit = answerWords.size <= maxWords
+                val matchesTemplate = template.toRegex().matches(answer)
+                withinMaxWordLimit && matchesTemplate
+            }
+    }
+
 }
