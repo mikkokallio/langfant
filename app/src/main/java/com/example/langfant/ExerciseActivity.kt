@@ -21,12 +21,10 @@ import org.json.JSONObject
 import java.io.InputStream
 
 abstract class ExerciseActivity : AppCompatActivity() {
-    private lateinit var exercises: JSONArray
+    lateinit var exercises: JSONArray
     //private lateinit var lessonWords: List<String>
-    private var currentIndex = 0
-    private var selectedWords = mutableListOf<String>()
-    private var englishToCroatian = true
-    private lateinit var progressBar: ProgressBar
+    var currentIndex = 0
+    lateinit var progressBar: ProgressBar
     private lateinit var vocabulary: MutableList<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,6 +52,42 @@ abstract class ExerciseActivity : AppCompatActivity() {
             findViewById<View>(R.id.wordmatch_content).visibility = View.VISIBLE
         }
 
+        exercises = getExercises(maxWords, template)
+
+        progressBar.max = exercises.length()
+        progressBar.progress = 0
+        println(exercises)
+
+        // Display initial exercise
+        displayExercise(currentIndex)
+
+        // Find the submit button
+        val submitButton: Button = findViewById(R.id.buttonSubmit)
+        setOnClickSubmit(submitButton)
+    }
+
+    abstract fun setOnClickSubmit(submitButton: Button)
+    abstract fun getExercises(maxWords: Int, template: String): JSONArray
+    abstract fun displayExercise(index: Int)
+}
+
+class TranslationExercise : ExerciseActivity() {
+    private var selectedWords = mutableListOf<String>()
+    private var englishToCroatian = true
+
+    override fun setOnClickSubmit(submitButton: Button) {
+        // Set OnClickListener for the submit button
+        submitButton.setOnClickListener {
+            // Handle button click here
+            // For now, let's just display the next exercise
+            checkAnswer()
+            currentIndex++
+            progressBar.progress = currentIndex
+            englishToCroatian = !englishToCroatian
+            displayExercise(currentIndex)
+        }
+    }
+    override fun getExercises(maxWords: Int, template: String): JSONArray {
         // Read JSON file
         val json = resources.openRawResource(R.raw.exercises).bufferedReader().use { it.readText() }
         exercises = JSONArray(json)
@@ -66,30 +100,42 @@ abstract class ExerciseActivity : AppCompatActivity() {
         val limitedExercises = shuffledExercises.take(15)
 
         // Convert filtered exercises to JSONArray
-        exercises = JSONArray(limitedExercises.toString())
-        progressBar.max = exercises.length()
-        progressBar.progress = 0
-        println(exercises)
-
-        // Display initial exercise
-        displayExercise(currentIndex)
-
-        // Find the submit button
-        val submitButton: Button = findViewById(R.id.buttonSubmit)
-
-        // Set OnClickListener for the submit button
-        submitButton.setOnClickListener {
-            // Handle button click here
-            // For now, let's just display the next exercise
-            checkAnswer()
-            currentIndex++
-            progressBar.progress = currentIndex
-            englishToCroatian = !englishToCroatian
-            displayExercise(currentIndex)
-        }
+        return JSONArray(limitedExercises.toString())
+    }
+    private fun filterExercises(exercises: JSONArray, maxWords: Int, template: String): List<JSONObject> {
+        return (0 until exercises.length())
+            .map { exercises.getJSONObject(it) }
+            .filter { exercise ->
+                val answer = exercise.getString("Croatian")
+                val answerWords = answer
+                    .replace("[^\\p{L}\\s']".toRegex(), "")
+                    .split(" ").map { it.trim() }
+                val withinMaxWordLimit = answerWords.size <= maxWords
+                val matchesTemplate = template.toRegex().matches(answer)
+                withinMaxWordLimit && matchesTemplate
+            }
     }
 
-    private fun displayExercise(index: Int) {
+    private fun toggleWordSelection(button: Button, word: String) {
+        // Toggle word selection by changing its background color
+        if (selectedWords.contains(word)) {
+            // Word is already selected, remove it
+            selectedWords.remove(word)
+            button.setTextColor(Color.BLACK)
+        } else {
+            // Word is not selected, add it
+            selectedWords.add(word)
+            button.setTextColor(Color.YELLOW)
+        }
+    }
+    private fun updateSelectedWordsTextView() {
+        // Display the selected words above the buttons
+        val selectedWordsText = selectedWords.joinToString(" ")
+        val selectedWordsTextView: TextView = findViewById(R.id.selectedWordsTextView)
+        selectedWordsTextView.text = selectedWordsText
+    }
+
+    override fun displayExercise(index: Int) {
         if (index < exercises.length()) {
             val exercise = exercises.getJSONObject(index)
             val sentence = exercise.getString(if (englishToCroatian) "English" else "Croatian")
@@ -137,26 +183,6 @@ abstract class ExerciseActivity : AppCompatActivity() {
         }
     }
 
-    private fun toggleWordSelection(button: Button, word: String) {
-        // Toggle word selection by changing its background color
-        if (selectedWords.contains(word)) {
-            // Word is already selected, remove it
-            selectedWords.remove(word)
-            button.setTextColor(Color.BLACK)
-        } else {
-            // Word is not selected, add it
-            selectedWords.add(word)
-            button.setTextColor(Color.YELLOW)
-        }
-    }
-
-    private fun updateSelectedWordsTextView() {
-        // Display the selected words above the buttons
-        val selectedWordsText = selectedWords.joinToString(" ")
-        val selectedWordsTextView: TextView = findViewById(R.id.selectedWordsTextView)
-        selectedWordsTextView.text = selectedWordsText
-    }
-
     private fun checkAnswer() {
         val exercise = exercises.getJSONObject(currentIndex)
         val answer = exercise.getString(if (englishToCroatian) "Croatian" else "English").replace("[^\\p{L}\\s']".toRegex(), "")
@@ -176,25 +202,6 @@ abstract class ExerciseActivity : AppCompatActivity() {
             // Sentences don't match, handle incorrect answer
             Toast.makeText(this, Html.fromHtml("<big>Incorrect. The correct answer is:<br/>$answer</big>"), Toast.LENGTH_LONG).show()
         }
-    }
-
-    abstract fun filterExercises(exercises: JSONArray, maxWords: Int, template: String): List<JSONObject>
-}
-
-class TranslationExercise : ExerciseActivity() {
-
-    override fun filterExercises(exercises: JSONArray, maxWords: Int, template: String): List<JSONObject> {
-        return (0 until exercises.length())
-            .map { exercises.getJSONObject(it) }
-            .filter { exercise ->
-                val answer = exercise.getString("Croatian")
-                val answerWords = answer
-                    .replace("[^\\p{L}\\s']".toRegex(), "")
-                    .split(" ").map { it.trim() }
-                val withinMaxWordLimit = answerWords.size <= maxWords
-                val matchesTemplate = template.toRegex().matches(answer)
-                withinMaxWordLimit && matchesTemplate
-            }
     }
 
 }
