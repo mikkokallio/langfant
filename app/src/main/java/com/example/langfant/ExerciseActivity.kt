@@ -330,8 +330,8 @@ class WordMatchExercise : ExerciseActivity() {
             }
             if (matchingPair != null) {
                 // The word and its translation match, remove both buttons
-                currentButton?.visibility = View.GONE
-                button.visibility = View.GONE
+                currentButton?.visibility = View.INVISIBLE
+                button.visibility = View.INVISIBLE
                 currentlySelected = -1
                 currentButton = null
             } else {
