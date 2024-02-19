@@ -253,6 +253,8 @@ class WordMatchExercise : ExerciseActivity() {
                 translations.add(translation)
             }
 
+            translations.shuffle()
+
             exercise.put("words", JSONArray(words))
             exercise.put("translations", JSONArray(translations))
 
