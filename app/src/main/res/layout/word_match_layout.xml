@@ -3,7 +3,8 @@
     android:id="@+id/wordmatch_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
     android:padding="16dp">
 
     <GridLayout
@@ -13,23 +14,23 @@
         android:columnCount="2"
         android:rowCount="5"
         android:orientation="horizontal"
-        android:padding="16dp"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:gravity="center_horizontal"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp">
 
         <!-- Column 1: Croatian Words -->
         <LinearLayout
-            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:orientation="vertical"
-            android:paddingEnd="8dp">
+            android:padding="16dp">
 
             <Button
                 android:id="@+id/button1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="Cr Word 1" />
+                android:text="Word 1" />
 
             <!-- Add more buttons for Croatian words as needed -->
             <Button
@@ -37,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="Cr Word 2" />
+                android:text="Word 2" />
 
             <!-- Add more buttons for Croatian words as needed -->
             <Button
@@ -45,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="Cr Word 3" />
+                android:text="Word 3" />
 
             <!-- Add more buttons for Croatian words as needed -->
             <Button
@@ -53,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="Cr Word 4" />
+                android:text="Word 4" />
 
             <!-- Add more buttons for Croatian words as needed -->
             <Button
@@ -61,23 +62,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="Cr Word 5" />
+                android:text="Word 5" />
         </LinearLayout>
 
         <!-- Column 2: English Translations -->
         <LinearLayout
-            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:orientation="vertical"
-            android:paddingStart="8dp">
+            android:padding="16dp">
 
             <Button
                 android:id="@+id/button6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="En Translation 1" />
+                android:text="Word 1" />
 
             <!-- Add more buttons for English translations as needed -->
             <Button
@@ -85,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="En Translation 2" />
+                android:text="Word 2" />
 
             <!-- Add more buttons for English translations as needed -->
             <Button
@@ -93,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="En Translation 3" />
+                android:text="Word 3" />
 
             <!-- Add more buttons for English translations as needed -->
             <Button
@@ -101,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="En Translation 4" />
+                android:text="Word 4" />
 
             <!-- Add more buttons for English translations as needed -->
             <Button
@@ -109,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="En Translation 5" />
+                android:text="Word 5" />
         </LinearLayout>
     </GridLayout>
 </LinearLayout>

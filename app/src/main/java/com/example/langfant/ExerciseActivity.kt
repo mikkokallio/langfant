@@ -207,6 +207,8 @@ class TranslationExercise : ExerciseActivity() {
 }
 
 class WordMatchExercise : ExerciseActivity() {
+    private var currentlySelected = -1
+    private var currentButton: Button? = null
     override fun setOnClickSubmit(submitButton: Button) {
         // Set OnClickListener for the submit button
         submitButton.setOnClickListener {
@@ -222,8 +224,6 @@ class WordMatchExercise : ExerciseActivity() {
     override fun getExercises(maxWords: Int, template: String, vocabularyList: ArrayList<String>): JSONArray {
         val json = resources.openRawResource(R.raw.vocabulary).bufferedReader().use { it.readText() }
         val vocabulary = JSONArray(json)
-        println(vocabulary)
-        println(vocabularyList)
 
         // Filter vocabulary array to include only words in the vocabulary list
         val filteredVocabulary = JSONArray()
@@ -282,16 +282,14 @@ class WordMatchExercise : ExerciseActivity() {
                 val buttonCroatian = Button(this)
                 buttonCroatian.text = words[i]
                 buttonCroatian.setOnClickListener {
-                    //toggleWordSelection(buttonCroatian, words[i])
-                    //updateSelectedWordsTextView()
+                    clickButton(i, buttonCroatian, words, translations)
                 }
                 layout.addView(buttonCroatian)
 
                 val buttonEnglish = Button(this)
                 buttonEnglish.text = translations[i]
                 buttonEnglish.setOnClickListener {
-                    //toggleWordSelection(buttonEnglish, translations[i])
-                    //updateSelectedWordsTextView()
+                    clickButton(i+5, buttonEnglish, words, translations)
                 }
                 layout.addView(buttonEnglish)
             }
@@ -305,4 +303,39 @@ class WordMatchExercise : ExerciseActivity() {
         }
     }
 
+    private fun clickButton(index: Int, button: Button, words: List<String>, translations: List<String>) {
+        if (currentlySelected == -1) {
+            currentlySelected = index
+            currentButton = button
+            button.setTextColor(Color.YELLOW)
+        } else if (index == currentlySelected) {
+            currentlySelected = -1
+            currentButton = null
+            button.setTextColor(Color.BLACK)
+        } else if (index <= 4 && currentlySelected <= 4 || index > 4 && currentlySelected > 4) {
+            currentButton?.setTextColor(Color.BLACK)
+            button.setTextColor(Color.YELLOW)
+            currentButton = button
+            currentlySelected = index
+        } else {
+            // Clicked button is on the opposite side as the currently selected button
+            val word = if (index <= 4) words[index] else translations[index - 5]
+            val translation = if (currentlySelected <= 4) words[currentlySelected] else translations[currentlySelected - 5]
+            println(word)
+            println(translation)
+            if (word == translation) {
+                // The word and its translation match, remove both buttons
+                currentButton?.visibility = View.GONE
+                button.visibility = View.GONE
+                currentlySelected = -1
+                currentButton = null
+            } else {
+                // The word and its translation do not match, deselect both buttons
+                currentButton?.setTextColor(Color.BLACK)
+                button.setTextColor(Color.BLACK)
+                currentlySelected = -1
+                currentButton = null
+            }
+        }
+    }
 }
