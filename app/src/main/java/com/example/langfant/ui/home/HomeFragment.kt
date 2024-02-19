@@ -51,14 +51,15 @@ class HomeFragment : Fragment() {
             for (i in 0 until jsonArray.length()) {
                 val lessonJson = jsonArray.getJSONObject(i)
                 val name = lessonJson.getString("name")
-                //val imageResource = lessonJson.getInt("image_resource")
+                val imageResource = lessonJson.getString("image_resource")
                 val description = lessonJson.getString("description")
                 val type = lessonJson.getString("type")
                 val vocabulary = parseJsonArray(lessonJson.getJSONArray("vocabulary"))
                 val template = lessonJson.getString("template")
                 val maxWords = lessonJson.getInt("max_words")
 
-                val lesson = Lesson(name, R.drawable.cat, description, type, vocabulary, template, maxWords)
+                val drawableId = resources.getIdentifier(imageResource, "drawable", requireContext().packageName)
+                val lesson = Lesson(name, drawableId, description, type, vocabulary, template, maxWords)
                 lessons.add(lesson)
             }
         } catch (e: Exception) {

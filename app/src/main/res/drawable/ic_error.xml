@@ -6,9 +6,9 @@
     android:viewportHeight="24"
     android:tint="@android:color/white">
     <path
-        android:fillColor="@android:color/white"
+        android:fillColor="@android:color/holo_red_dark"
         android:pathData="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z"/>
     <path
-        android:fillColor="@android:color/white"
+        android:fillColor="@android:color/holo_red_dark"
         android:pathData="M15.41,8.59L12,12l-3.41-3.41c-0.39-0.39-1.02-0.39-1.41,0s-0.39,1.02,0,1.41L10.59,13L7.17,16.41c-0.39,0.39-0.39,1.02,0,1.41C7.36,17.89,7.68,18,8,18s0.64-0.11,0.83-0.34L12,14.83l3.17,3.18c0.19,0.23,0.45,0.34,0.83,0.34s0.64-0.11,0.83-0.34c0.39-0.39,0.39-1.02,0-1.41L13.41,13l2.59-2.59C15.8,9.61,15.8,8.98,15.41,8.59z"/>
 </vector>
