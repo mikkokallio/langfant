@@ -209,6 +209,7 @@ class TranslationExercise : ExerciseActivity() {
 class WordMatchExercise : ExerciseActivity() {
     private var currentlySelected = -1
     private var currentButton: Button? = null
+    private lateinit var filteredVocabulary: JSONArray
     override fun setOnClickSubmit(submitButton: Button) {
         // Set OnClickListener for the submit button
         submitButton.setOnClickListener {
@@ -226,7 +227,7 @@ class WordMatchExercise : ExerciseActivity() {
         val vocabulary = JSONArray(json)
 
         // Filter vocabulary array to include only words in the vocabulary list
-        val filteredVocabulary = JSONArray()
+        filteredVocabulary = JSONArray()
         for (i in 0 until vocabulary.length()) {
             val word = vocabulary.getJSONObject(i).getString("Croatian")
             if (vocabularyList.contains(word)) {
@@ -282,14 +283,14 @@ class WordMatchExercise : ExerciseActivity() {
                 val buttonCroatian = Button(this)
                 buttonCroatian.text = words[i]
                 buttonCroatian.setOnClickListener {
-                    clickButton(i, buttonCroatian, words, translations)
+                    clickButton(i, buttonCroatian)
                 }
                 layout.addView(buttonCroatian)
 
                 val buttonEnglish = Button(this)
                 buttonEnglish.text = translations[i]
                 buttonEnglish.setOnClickListener {
-                    clickButton(i+5, buttonEnglish, words, translations)
+                    clickButton(i+5, buttonEnglish)
                 }
                 layout.addView(buttonEnglish)
             }
@@ -303,7 +304,7 @@ class WordMatchExercise : ExerciseActivity() {
         }
     }
 
-    private fun clickButton(index: Int, button: Button, words: List<String>, translations: List<String>) {
+    private fun clickButton(index: Int, button: Button) {
         if (currentlySelected == -1) {
             currentlySelected = index
             currentButton = button
@@ -318,12 +319,14 @@ class WordMatchExercise : ExerciseActivity() {
             currentButton = button
             currentlySelected = index
         } else {
-            // Clicked button is on the opposite side as the currently selected button
-            val word = if (index <= 4) words[index] else translations[index - 5]
-            val translation = if (currentlySelected <= 4) words[currentlySelected] else translations[currentlySelected - 5]
-            println(word)
-            println(translation)
-            if (word == translation) {
+            val vocabularyList = (0 until filteredVocabulary.length()).map { filteredVocabulary.getJSONObject(it) }
+            val isFirstCroatian = currentlySelected < 5
+            val matchingPair = if (isFirstCroatian) {
+                vocabularyList.find { it.getString("Croatian") == currentButton?.text && it.getString("English") == button.text }
+            } else {
+                vocabularyList.find { it.getString("English") == currentButton?.text && it.getString("Croatian") == button.text }
+            }
+            if (matchingPair != null) {
                 // The word and its translation match, remove both buttons
                 currentButton?.visibility = View.GONE
                 button.visibility = View.GONE
