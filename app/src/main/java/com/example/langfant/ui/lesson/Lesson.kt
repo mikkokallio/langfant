@@ -8,5 +8,6 @@ data class Lesson(
     val type: String,
     val vocabulary: List<String>,
     val template: String,
-    val maxWords: Int
+    val maxWords: Int,
+    val completed: Boolean
     )

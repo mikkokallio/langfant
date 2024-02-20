@@ -42,6 +42,7 @@ class HomeFragment : Fragment() {
 
         return rootView
     }
+
     override fun onResume() {
         super.onResume()
 
@@ -51,6 +52,7 @@ class HomeFragment : Fragment() {
 
     private fun loadLessonsFromJson(): List<Lesson> {
         val lessons = mutableListOf<Lesson>()
+        val completedLessons = getCompletedLessonIds(requireContext())
 
         try {
             val json = resources.openRawResource(R.raw.lessons).bufferedReader().use { it.readText() }
@@ -66,9 +68,10 @@ class HomeFragment : Fragment() {
                 val vocabulary = parseJsonArray(lessonJson.getJSONArray("vocabulary"))
                 val template = lessonJson.getString("template")
                 val maxWords = lessonJson.getInt("max_words")
+                val completed = completedLessons.contains(id.toString())
 
                 val drawableId = resources.getIdentifier(imageResource, "drawable", requireContext().packageName)
-                val lesson = Lesson(id, name, drawableId, description, type, vocabulary, template, maxWords)
+                val lesson = Lesson(id, name, drawableId, description, type, vocabulary, template, maxWords, completed)
                 lessons.add(lesson)
             }
         } catch (e: Exception) {

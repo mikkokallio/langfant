@@ -13,8 +13,7 @@ import com.example.langfant.ExerciseActivity
 import com.example.langfant.TranslationExercise
 import com.example.langfant.WordMatchExercise
 
-class LessonAdapter(private val lessons: List<Lesson>) :
-    RecyclerView.Adapter<LessonAdapter.LessonViewHolder>() {
+class LessonAdapter(private val lessons: List<Lesson>) : RecyclerView.Adapter<LessonAdapter.LessonViewHolder>() {
 
     private val expandedState = Array(lessons.size) { false }
 
@@ -32,10 +31,12 @@ class LessonAdapter(private val lessons: List<Lesson>) :
     }
 
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
-        val currentLesson = lessons[position]
-        holder.lessonName.text = currentLesson.name
-        holder.lessonImage.setImageResource(currentLesson.imageResource)
-        holder.lessonDescription.text = currentLesson.description
+        val lesson = lessons[position]
+        holder.lessonName.text = lesson.name
+        //holder.lessonImage.setImageResource(lesson.imageResource)
+        holder.lessonImage.setImageResource(if (lesson.completed) R.drawable.ic_checked_checkbox else R.drawable.ic_empty_checkbox)
+
+        holder.lessonDescription.text = lesson.description
 
         // Show/hide description and start button based on expanded state
         if (expandedState[position]) {
