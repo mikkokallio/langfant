@@ -61,6 +61,7 @@ class LessonAdapter(private val lessons: List<Lesson>) :
             }
 
             val vocabularyArray = lessons[position].vocabulary.toTypedArray()
+            intent.putExtra("id", lessons[position].id)
             intent.putExtra("vocabulary", vocabularyArray)
             intent.putExtra("maxWords", lessons[position].maxWords)
             intent.putExtra("template", lessons[position].template)

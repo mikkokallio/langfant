@@ -1,6 +1,8 @@
 package com.example.langfant.ui.home
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +42,12 @@ class HomeFragment : Fragment() {
 
         return rootView
     }
+    override fun onResume() {
+        super.onResume()
+
+        val completedLessonIds = getCompletedLessonIds(requireContext())
+        Log.d("Completed Lessons", completedLessonIds.toString())
+    }
 
     private fun loadLessonsFromJson(): List<Lesson> {
         val lessons = mutableListOf<Lesson>()
@@ -50,6 +58,7 @@ class HomeFragment : Fragment() {
 
             for (i in 0 until jsonArray.length()) {
                 val lessonJson = jsonArray.getJSONObject(i)
+                val id = lessonJson.getInt("id")
                 val name = lessonJson.getString("name")
                 val imageResource = lessonJson.getString("image_resource")
                 val description = lessonJson.getString("description")
@@ -59,7 +68,7 @@ class HomeFragment : Fragment() {
                 val maxWords = lessonJson.getInt("max_words")
 
                 val drawableId = resources.getIdentifier(imageResource, "drawable", requireContext().packageName)
-                val lesson = Lesson(name, drawableId, description, type, vocabulary, template, maxWords)
+                val lesson = Lesson(id, name, drawableId, description, type, vocabulary, template, maxWords)
                 lessons.add(lesson)
             }
         } catch (e: Exception) {
@@ -74,14 +83,9 @@ class HomeFragment : Fragment() {
         }
         return list
     }
-    private fun parseJsonObject(jsonObject: JSONObject): MutableMap<String, String> {
-        val obj = mutableMapOf<String, String>()
-        val keys = jsonObject.keys()
-        while (keys.hasNext()) {
-            val key = keys.next()
-            val value = jsonObject.getString(key)
-            obj[key] = value
-        }
-        return obj
+    private fun getCompletedLessonIds(context: Context): Set<String> {
+        val sharedPreferences = context.getSharedPreferences("completed_lessons", Context.MODE_PRIVATE)
+        return sharedPreferences.getStringSet("completed_lessons", HashSet<String>()) ?: HashSet<String>()
     }
+
 }

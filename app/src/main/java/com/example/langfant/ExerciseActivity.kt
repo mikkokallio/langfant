@@ -1,5 +1,6 @@
 package com.example.langfant
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -27,6 +28,7 @@ abstract class ExerciseActivity : AppCompatActivity() {
     var currentIndex = 0
     lateinit var progressBar: ProgressBar
     private lateinit var vocabulary: MutableList<String>
+    var id = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +38,7 @@ abstract class ExerciseActivity : AppCompatActivity() {
         progressBar = findViewById<ProgressBar>(R.id.progressBar)
 
         // Retrieve extras from intent
+        id = intent.getIntExtra("id", 0)
         val vocabularyArray = intent.getStringArrayExtra("vocabulary") ?: arrayOf()
         vocabulary = ArrayList<String>(vocabularyArray.toList())
         val maxWords = intent.getIntExtra("maxWords", 0)
@@ -65,6 +68,14 @@ abstract class ExerciseActivity : AppCompatActivity() {
         // Find the submit button
         val submitButton: Button = findViewById(R.id.buttonSubmit)
         setOnClickSubmit(submitButton)
+    }
+    fun saveCompletedLessonId() {
+        val sharedPreferences = getSharedPreferences("completed_lessons", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val completedLessonSet = sharedPreferences.getStringSet("completed_lessons", HashSet<String>()) ?: HashSet<String>()
+        completedLessonSet.add(id.toString())
+        editor.putStringSet("completed_lessons", completedLessonSet)
+        editor.apply()
     }
 
     abstract fun setOnClickSubmit(submitButton: Button)
@@ -177,6 +188,7 @@ class TranslationExercise : ExerciseActivity() {
         } else {
             // No more exercises, handle end of exercises
             Toast.makeText(this, "No more exercises", Toast.LENGTH_SHORT).show()
+            saveCompletedLessonId()
 
             // Navigate back to the lessons view
             val intent = Intent(this, MainActivity::class.java)
@@ -299,6 +311,7 @@ class WordMatchExercise : ExerciseActivity() {
         } else {
             // No more exercises, handle end of exercises
             Toast.makeText(this, "No more exercises", Toast.LENGTH_SHORT).show()
+            saveCompletedLessonId()
 
             // Navigate back to the lessons view
             val intent = Intent(this, MainActivity::class.java)

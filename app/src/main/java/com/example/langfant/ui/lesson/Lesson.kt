@@ -1,6 +1,7 @@
 package com.example.langfant.ui.lesson
 
 data class Lesson(
+    val id: Int,
     val name: String,
     val imageResource: Int,
     val description: String,
