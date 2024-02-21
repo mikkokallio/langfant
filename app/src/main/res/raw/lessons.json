@@ -19,7 +19,7 @@
     "vocabulary": ["mačka", "pas", "auto", "bicikl", "kuća", "škola", "stol", "stolica", "knjiga", "telefon", "čovjek", "žena", "hrana", "voda", "voće", "cvijet", "ulica", "grad"],
     "max_words": 1,
     "template": "",
-    "depends_on": []
+    "depends_on": [111, 301]
   },
   {
     "id": 121,

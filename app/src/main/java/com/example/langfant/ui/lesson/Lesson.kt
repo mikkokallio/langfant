@@ -9,5 +9,6 @@ data class Lesson(
     val vocabulary: List<String>,
     val template: String,
     val maxWords: Int,
-    val completed: Boolean
-    )
+    val completed: Boolean,
+    val isLocked: Boolean
+)

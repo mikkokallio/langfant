@@ -33,8 +33,14 @@ class LessonAdapter(private val lessons: List<Lesson>) : RecyclerView.Adapter<Le
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
         val lesson = lessons[position]
         holder.lessonName.text = lesson.name
-        //holder.lessonImage.setImageResource(lesson.imageResource)
-        holder.lessonImage.setImageResource(if (lesson.completed) R.drawable.ic_checked_checkbox else R.drawable.ic_empty_checkbox)
+
+        if (lesson.completed) {
+            holder.lessonImage.setImageResource(R.drawable.ic_checked_checkbox)
+        } else if (lesson.isLocked) {
+            holder.lessonImage.setImageResource(R.drawable.ic_lock)
+        } else {
+            holder.lessonImage.setImageResource(R.drawable.ic_empty_checkbox)
+        }
 
         holder.lessonDescription.text = lesson.description
 

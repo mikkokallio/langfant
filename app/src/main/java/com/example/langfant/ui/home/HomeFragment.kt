@@ -52,7 +52,7 @@ class HomeFragment : Fragment() {
 
     private fun loadLessonsFromJson(): List<Lesson> {
         val lessons = mutableListOf<Lesson>()
-        val completedLessons = getCompletedLessonIds(requireContext())
+        val completedLessons : Set<String> = getCompletedLessonIds(requireContext())
 
         try {
             val json = resources.openRawResource(R.raw.lessons).bufferedReader().use { it.readText() }
@@ -69,9 +69,12 @@ class HomeFragment : Fragment() {
                 val template = lessonJson.getString("template")
                 val maxWords = lessonJson.getInt("max_words")
                 val completed = completedLessons.contains(id.toString())
+                val dependsOn = lessonJson.optJSONArray("depends_on")
+                val dependsOnList = (0 until (dependsOn?.length() ?: 0)).mapNotNull { dependsOn?.getInt(it) }
+                val isLocked = dependsOn != null && !completedLessons.map { it.toInt() }.containsAll(dependsOnList)
 
                 val drawableId = resources.getIdentifier(imageResource, "drawable", requireContext().packageName)
-                val lesson = Lesson(id, name, drawableId, description, type, vocabulary, template, maxWords, completed)
+                val lesson = Lesson(id, name, drawableId, description, type, vocabulary, template, maxWords, completed, isLocked)
                 lessons.add(lesson)
             }
         } catch (e: Exception) {
