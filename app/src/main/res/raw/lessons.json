@@ -1,7 +1,18 @@
 [
   {
     "id": 101,
-    "name": "Cats and dogs!",
+    "name": "Nouns: Animals I",
+    "image_resource": "cat",
+    "description": "Learn some of the most common nouns.",
+    "type": "word-match",
+    "vocabulary": ["mačka", "pas", "konj", "ovca", "svinja", "krava", "kokoš", "riba", "ptica", "životinja"],
+    "max_words": 1,
+    "template": "",
+    "depends_on": []
+  },
+  {
+    "id": 111,
+    "name": "Nouns: People I",
     "image_resource": "cat",
     "description": "Learn some of the most common nouns.",
     "type": "word-match",
@@ -11,7 +22,29 @@
     "depends_on": []
   },
   {
-    "id": 151,
+    "id": 121,
+    "name": "Nouns: Buildings I",
+    "image_resource": "cat",
+    "description": "Learn some of the most common nouns.",
+    "type": "word-match",
+    "vocabulary": ["mačka", "pas", "auto", "bicikl", "kuća", "škola", "stol", "stolica", "knjiga", "telefon", "čovjek", "žena", "hrana", "voda", "voće", "cvijet", "ulica", "grad"],
+    "max_words": 1,
+    "template": "",
+    "depends_on": []
+  },
+  {
+    "id": 131,
+    "name": "Nouns: Food I",
+    "image_resource": "cat",
+    "description": "Learn some of the most common nouns.",
+    "type": "word-match",
+    "vocabulary": ["mačka", "pas", "auto", "bicikl", "kuća", "škola", "stol", "stolica", "knjiga", "telefon", "čovjek", "žena", "hrana", "voda", "voće", "cvijet", "ulica", "grad"],
+    "max_words": 1,
+    "template": "",
+    "depends_on": []
+  },
+  {
+    "id": 201,
     "name": "You and I, this and that",
     "image_resource": "ic_check_circle",
     "description": "Learn singular pronouns: I, you, she, he, this and that.",
@@ -22,18 +55,18 @@
     "depends_on": []
   },
   {
-    "id": 151,
+    "id": 301,
     "name": "And and or",
     "image_resource": "cat",
     "description": "Learn the conjunctions and and or.",
     "type": "translation",
-    "vocabulary": ["i", "ti", "ona", "on", "ovo", "to"],
+    "vocabulary": ["i", "ili"],
     "max_words": 1,
-    "template": "",
+    "template": "^.*\\s(i|ili)\\s.*\\?$",
     "depends_on": []
   },
   {
-    "id": 250,
+    "id": 401,
     "name": "The cat is black",
     "image_resource": "cat",
     "description": "Learn some basic words and form simple sentences",
@@ -44,7 +77,7 @@
     "depends_on": []
   },
   {
-    "id": 300,
+    "id": 501,
     "name": "Is that so?",
     "image_resource": "cat",
     "description": "Learn to form questions with 'li'.",
@@ -55,7 +88,7 @@
     "depends_on": []
   },
   {
-    "id": 667,
+    "id": 601,
     "name": "What???",
     "image_resource": "ic_error",
     "description": "Learn the word 'što'.",
@@ -66,7 +99,7 @@
     "depends_on": []
   },
   {
-    "id": 668,
+    "id": 701,
     "name": "How much is enough?",
     "image_resource": "cat",
     "description": "Learn to ask how much.",
@@ -74,6 +107,17 @@
     "type": "translation",
     "max_words": 5,
     "template": "^(Koliko|Kako).+\\?$",
+    "depends_on": []
+  },
+  {
+    "id": 901,
+    "name": "Common verbs",
+    "image_resource": "cat",
+    "description": "Learn to ask how much.",
+    "vocabulary": ["biti","vidjeti","ići","učiniti","znati","ubiti","vratiti","raditi","imati","napraviti","dobiti","razgovarati","pusti","vjerovati","prestani","ostati","umrijeti","uzeti","pričati","čuti","pitati","živjeti","gledati","ostaviti","dogoditi"],
+    "type": "word-match",
+    "max_words": 1,
+    "template": "",
     "depends_on": []
   }
 ]
