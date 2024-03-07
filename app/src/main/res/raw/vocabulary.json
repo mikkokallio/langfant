@@ -1,183 +1,66 @@
 [
   {
-    "English": "car",
-    "Croatian": "auto"
+    "English": "read",
+    "Croatian": "čitati"
   },
   {
-    "English": "bike",
-    "Croatian": "bicikl"
+    "English": "cook",
+    "Croatian": "kuhati"
   },
   {
-    "English": "house",
-    "Croatian": "kuća"
+    "English": "sing",
+    "Croatian": "pjevati"
   },
   {
-    "English": "school",
-    "Croatian": "škola"
-  },
-  {
-    "English": "table",
-    "Croatian": "stol"
-  },
-  {
-    "English": "chair",
-    "Croatian": "stolica"
-  },
-  {
-    "English": "book",
-    "Croatian": "knjiga"
-  },
-  {
-    "English": "phone",
-    "Croatian": "telefon"
-  },
-  {
-    "English": "man",
-    "Croatian": "čovjek"
-  },
-  {
-    "English": "woman",
-    "Croatian": "žena"
-  },
-  {
-    "English": "food",
-    "Croatian": "hrana"
-  },
-  {
-    "English": "water",
-    "Croatian": "voda"
-  },
-  {
-    "English": "fruit",
-    "Croatian": "voće"
-  },
-  {
-    "English": "flower",
-    "Croatian": "cvijet"
-  },
-  {
-    "English": "street",
-    "Croatian": "ulica"
-  },
-  {
-    "English": "city",
-    "Croatian": "grad"
-  },
-  {"English": "I", "Croatian": "ja"},
-  {"English": "you", "Croatian": "ti"},
-  {"English": "she", "Croatian": "ona"},
-  {"English": "he", "Croatian": "on"},
-  {"English": "this", "Croatian": "ovo"},
-  {"English": "that", "Croatian": "to"},
-    {"Croatian": "mačka", "English": "cat"},
-    {"Croatian": "pas", "English": "dog"},
-    {"Croatian": "konj", "English": "horse"},
-    {"Croatian": "ovca", "English": "sheep"},
-    {"Croatian": "svinja", "English": "pig"},
-    {"Croatian": "krava", "English": "cow"},
-    {"Croatian": "kokoš", "English": "chicken"},
-    {"Croatian": "riba", "English": "fish"},
-    {"Croatian": "ptica", "English": "bird"},
-    {"Croatian": "životinja", "English": "animal"},
-  {
-    "English": "to be",
-    "Croatian": "biti"
-  },
-  {
-    "English": "to see",
-    "Croatian": "vidjeti"
-  },
-  {
-    "English": "to go",
-    "Croatian": "ići"
-  },
-  {
-    "English": "to do",
-    "Croatian": "učiniti"
-  },
-  {
-    "English": "to know",
-    "Croatian": "znati"
-  },
-  {
-    "English": "to kill",
-    "Croatian": "ubiti"
-  },
-  {
-    "English": "to return",
-    "Croatian": "vratiti"
-  },
-  {
-    "English": "to work",
+    "English": "work",
     "Croatian": "raditi"
   },
   {
-    "English": "to have",
-    "Croatian": "imati"
+    "English": "swim",
+    "Croatian": "plivati"
   },
   {
-    "English": "to make",
-    "Croatian": "napraviti"
+    "English": "sleep",
+    "Croatian": "spavati"
   },
   {
-    "English": "to get",
-    "Croatian": "dobiti"
+    "English": "study",
+    "Croatian": "učiti"
   },
   {
-    "English": "to talk",
-    "Croatian": "razgovarati"
+    "English": "drive",
+    "Croatian": "voziti"
   },
   {
-    "English": "to let",
-    "Croatian": "pusti"
+    "English": "reads",
+    "Croatian": "čita"
   },
   {
-    "English": "to believe",
-    "Croatian": "vjerovati"
+    "English": "cooks",
+    "Croatian": "kuha"
   },
   {
-    "English": "to stop",
-    "Croatian": "prestani"
+    "English": "sings",
+    "Croatian": "pjeva"
   },
   {
-    "English": "to stay",
-    "Croatian": "ostati"
+    "English": "works",
+    "Croatian": "radi"
   },
   {
-    "English": "to die",
-    "Croatian": "umrijeti"
+    "English": "swims",
+    "Croatian": "pliva"
   },
   {
-    "English": "to take",
-    "Croatian": "uzeti"
+    "English": "sleeps",
+    "Croatian": "spava"
   },
   {
-    "English": "to speak",
-    "Croatian": "pričati"
+    "English": "studies",
+    "Croatian": "uči"
   },
   {
-    "English": "to hear",
-    "Croatian": "čuti"
-  },
-  {
-    "English": "to ask",
-    "Croatian": "pitati"
-  },
-  {
-    "English": "to live",
-    "Croatian": "živjeti"
-  },
-  {
-    "English": "to watch",
-    "Croatian": "gledati"
-  },
-  {
-    "English": "to leave",
-    "Croatian": "ostaviti"
-  },
-  {
-    "English": "to happen",
-    "Croatian": "dogoditi"
+    "English": "drives",
+    "Croatian": "vozi"
   }
-
 ]

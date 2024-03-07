@@ -1,0 +1,183 @@
+[
+  {
+    "English": "car",
+    "Croatian": "auto"
+  },
+  {
+    "English": "bike",
+    "Croatian": "bicikl"
+  },
+  {
+    "English": "house",
+    "Croatian": "kuća"
+  },
+  {
+    "English": "school",
+    "Croatian": "škola"
+  },
+  {
+    "English": "table",
+    "Croatian": "stol"
+  },
+  {
+    "English": "chair",
+    "Croatian": "stolica"
+  },
+  {
+    "English": "book",
+    "Croatian": "knjiga"
+  },
+  {
+    "English": "phone",
+    "Croatian": "telefon"
+  },
+  {
+    "English": "man",
+    "Croatian": "čovjek"
+  },
+  {
+    "English": "woman",
+    "Croatian": "žena"
+  },
+  {
+    "English": "food",
+    "Croatian": "hrana"
+  },
+  {
+    "English": "water",
+    "Croatian": "voda"
+  },
+  {
+    "English": "fruit",
+    "Croatian": "voće"
+  },
+  {
+    "English": "flower",
+    "Croatian": "cvijet"
+  },
+  {
+    "English": "street",
+    "Croatian": "ulica"
+  },
+  {
+    "English": "city",
+    "Croatian": "grad"
+  },
+  {"English": "I", "Croatian": "ja"},
+  {"English": "you", "Croatian": "ti"},
+  {"English": "she", "Croatian": "ona"},
+  {"English": "he", "Croatian": "on"},
+  {"English": "this", "Croatian": "ovo"},
+  {"English": "that", "Croatian": "to"},
+    {"Croatian": "mačka", "English": "cat"},
+    {"Croatian": "pas", "English": "dog"},
+    {"Croatian": "konj", "English": "horse"},
+    {"Croatian": "ovca", "English": "sheep"},
+    {"Croatian": "svinja", "English": "pig"},
+    {"Croatian": "krava", "English": "cow"},
+    {"Croatian": "kokoš", "English": "chicken"},
+    {"Croatian": "riba", "English": "fish"},
+    {"Croatian": "ptica", "English": "bird"},
+    {"Croatian": "životinja", "English": "animal"},
+  {
+    "English": "to be",
+    "Croatian": "biti"
+  },
+  {
+    "English": "to see",
+    "Croatian": "vidjeti"
+  },
+  {
+    "English": "to go",
+    "Croatian": "ići"
+  },
+  {
+    "English": "to do",
+    "Croatian": "učiniti"
+  },
+  {
+    "English": "to know",
+    "Croatian": "znati"
+  },
+  {
+    "English": "to kill",
+    "Croatian": "ubiti"
+  },
+  {
+    "English": "to return",
+    "Croatian": "vratiti"
+  },
+  {
+    "English": "to work",
+    "Croatian": "raditi"
+  },
+  {
+    "English": "to have",
+    "Croatian": "imati"
+  },
+  {
+    "English": "to make",
+    "Croatian": "napraviti"
+  },
+  {
+    "English": "to get",
+    "Croatian": "dobiti"
+  },
+  {
+    "English": "to talk",
+    "Croatian": "razgovarati"
+  },
+  {
+    "English": "to let",
+    "Croatian": "pusti"
+  },
+  {
+    "English": "to believe",
+    "Croatian": "vjerovati"
+  },
+  {
+    "English": "to stop",
+    "Croatian": "prestani"
+  },
+  {
+    "English": "to stay",
+    "Croatian": "ostati"
+  },
+  {
+    "English": "to die",
+    "Croatian": "umrijeti"
+  },
+  {
+    "English": "to take",
+    "Croatian": "uzeti"
+  },
+  {
+    "English": "to speak",
+    "Croatian": "pričati"
+  },
+  {
+    "English": "to hear",
+    "Croatian": "čuti"
+  },
+  {
+    "English": "to ask",
+    "Croatian": "pitati"
+  },
+  {
+    "English": "to live",
+    "Croatian": "živjeti"
+  },
+  {
+    "English": "to watch",
+    "Croatian": "gledati"
+  },
+  {
+    "English": "to leave",
+    "Croatian": "ostaviti"
+  },
+  {
+    "English": "to happen",
+    "Croatian": "dogoditi"
+  }
+
+]
